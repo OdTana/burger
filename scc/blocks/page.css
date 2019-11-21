@@ -1,0 +1,77 @@
+.content{
+    width: 470px;
+    margin-bottom: 50px;
+}
+
+.about__title{
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+}
+
+.about__text{
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.order-button{
+        background-color: rgb(255, 255, 255);
+        width: 156px;
+        height: 58px;
+        border-radius: 45px;
+        color: #0f5a47;
+        font-size: 19px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 70px;
+        font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif;
+        
+}
+
+.desc__list{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+.desc__item{
+    display: flex;
+    padding-right: 48px;
+    font-size: 16px;
+}
+
+.desc__text{
+    font-size: 16px;
+    padding-left: 10px; 
+}
+
+/* .pages__elips{
+    list-style-type: disc;
+} */
+
+.pages__elips{
+    z-index: 100;
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.page__elips--active:before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+   
+}

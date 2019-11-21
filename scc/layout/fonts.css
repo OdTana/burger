@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Alegreya Sans MediumItalic';
+    src: url('/chocco_LS/fonts/AlegreyaSans-MediumItalic.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans ExtraBold';
+    src: url('/chocco_LS/fonts/AlegreyaSans-ExtraBold.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans Black';
+    src: url('/chocco_LS/fonts/AlegreyaSans-Black.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans Regular';
+    src: url('/chocco_LS/fonts/AlegreyaSans-Regular.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans Bold';
+    src: url('/chocco_LS/fonts/AlegreyaSans-Bold.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans BoldItalic';
+    src: url('/chocco_LS/fonts/AlegreyaSans-BoldItalic.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans BlackItalic';
+    src: url('/chocco_LS/fonts/AlegreyaSans-BlackItalic.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans Italic';
+    src: url('/chocco_LS/fonts/AlegreyaSans-Italic.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans Medium';
+    src: url('/chocco_LS/fonts/AlegreyaSans-Medium.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans Light';
+    src: url('/chocco_LS/fonts/AlegreyaSans-Light.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans ThinItalic';
+    src: url('/chocco_LS/fonts/AlegreyaSans-ThinItalic.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans Thin';
+    src: url('/chocco_LS/fonts/AlegreyaSans-Thin.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans ExtraBoldItalic';
+    src: url('/chocco_LS/fonts/AlegreyaSans-ExtraBoldItalic.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans LightItalic';
+    src: url('/chocco_LS/fonts/AlegreyaSans-LightItalic.woff2') format('woff2'),
+        url('/chocco_LS/fonts/AlegreyaSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
