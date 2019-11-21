@@ -46,10 +46,6 @@
     padding-left: 10px; 
 }
 
-/* .pages__elips{
-    list-style-type: disc;
-} */
-
 .pages__elips{
     z-index: 100;
     display: block;

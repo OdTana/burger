@@ -1,7 +1,7 @@
-@import url('/chocco_LS/scc/layout/fonts.css');
-@import url('/chocco_LS/scc/layout/normalize.css');
-@import url('/chocco_LS/scc/layout/base.css');
+@import url('../scc/layout/fonts.css');
+@import url('../scc/layout/normalize.css');
+@import url('../scc/layout/base.css');
 
-@import url('/chocco_LS/scc/blocks/header.css');
-@import url('/chocco_LS/scc/blocks/nav.css');
-@import url('/chocco_LS/scc/blocks/page.css');
+@import url('../scc/blocks/header.css');
+@import url('../scc/blocks/nav.css');
+@import url('../scc/blocks/page.css');
