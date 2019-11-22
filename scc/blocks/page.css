@@ -1,16 +1,32 @@
 .content{
-    width: 470px;
     margin-bottom: 50px;
+    display: block;
 }
 
-.about__title{
+.content--left{
+    width: 470px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.content--left .info{
+    text-align: start;
+}
+
+.info__title{
     font-size: 60px;
     text-transform: uppercase;
     margin-bottom: 20px;
     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
 }
 
-.about__text{
+.info__text{
     font-size: 21px;
     margin-bottom: 30px;
 }
@@ -23,7 +39,6 @@
         color: #0f5a47;
         font-size: 19px;
         text-transform: uppercase;
-        font-weight: bold;
         margin-bottom: 70px;
         font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif;
         
@@ -35,10 +50,61 @@
     padding: 0;
   }
 
+.desc__list--vertical{
+    display: flex;
+    flex-direction: row;
+
+}
+
 .desc__item{
     display: flex;
     padding-right: 48px;
     font-size: 16px;
+}
+
+.desc__item:last-child{
+    padding-right: 0;
+}
+
+.desc__pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 125px;
+    background-color: #f2f5f4;
+    border-radius: 50%;
+
+}
+
+/* .desc__pic::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 125px;
+    height: 125px;
+    background-color: #f2f5f4;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+
+.desc__list--vertical .desc__item{
+    display: flex;
+    flex-direction: column;
+    ALIGN-ITEMS: center;
+    text-align: center;
+}
+
+.desc__title{
+    font-size: 27px;
 }
 
 .desc__text{
@@ -70,4 +136,16 @@
     transform: translate(-50%, -50%);
     border: 1px solid #fff;
    
+}
+
+.about__title{
+    font-size: 48px;
+    text-transform: uppercase;
+    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+    margin-bottom: 25px;
+}
+
+.about__text{
+    color: #666666;
+    padding: 0px 230px;
 }

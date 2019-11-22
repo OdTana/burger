@@ -27,6 +27,11 @@ a {
   color: inherit;
 }
 
+.page {
+  flex: 1; 
+  position: relative;
+}
+
 .page--color-white{
   color:#eaf7fa;
 }
@@ -50,24 +55,43 @@ a {
     /* min-height: 100%; */
     display: flex;
     flex-direction: column;
-    background: url(../../img/icon/pattern.png) #61c4d9 no-repeat bottom right;
 }
 
-.wrapper:after {
+
+.wrapper--screen-first .page{
+  position: relative;
+  background: 
+  url(../../img/icon/chocco_sect/berry1.png)  65% 87% no-repeat,
+   url(../../img/icon/chocco_sect/leaf1.png)  90% 77% no-repeat,
+   url(../../img/icon/chocco_sect/bars.png) 90% 27% no-repeat,
+   url(../../img/icon/chocco_sect/pattern.png) no-repeat;
+   background-size: auto,auto,auto,cover;
+  
+  }
+
+
+.wrapper--screen-first:after{
   content: '';
   overflow: hidden;
   min-width: 100%;
   min-height: 100%;
   position: absolute;
-  background: url(../../img/icon/bars.png) no-repeat center right 25px;
+  background:  
+  url(../../img/icon/chocco_sect/leaf2.png) 65% 98% no-repeat,
+  url(../../img/icon/chocco_sect/berry2.png) no-repeat  85% 98%,
+  url(../../img/icon/chocco_sect/leaf3.png) no-repeat  4% 98%;
 }
 
 
-/* .page {
-    flex: 1; 
-  }
 
+.wrapper--why{
+  position: relative;
+  background: url(../../img/icon/why_sect/pattern_why.png) no-repeat bottom left;
+}
 
+.footer{
+  height: 50px;
+}
 /* ul, p, h5 {
     margin: 0;
     padding: 0;
