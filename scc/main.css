@@ -2,6 +2,14 @@
 @import url('../scc/layout/normalize.css');
 @import url('../scc/layout/base.css');
 
+@import url('../scc/blocks/page.css');
 @import url('../scc/blocks/header.css');
 @import url('../scc/blocks/nav.css');
-@import url('../scc/blocks/page.css');
+@import url('../scc/blocks/about.css');
+@import url('../scc/blocks/info.css');
+@import url('../scc/blocks/button.css');
+@import url('../scc/blocks/desc.css');
+@import url('../scc/blocks/pages.css');
+@import url('../scc/blocks/review.css');
+
+

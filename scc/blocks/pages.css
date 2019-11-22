@@ -1,0 +1,11 @@
+.pages__elips{
+    z-index: 100;
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
