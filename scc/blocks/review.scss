@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-.review__icon{
+.review__item{
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -13,16 +13,16 @@
     margin-right: 12px;
 }   
 
-.review__icon--active{
+.review__item--active{
     border: 5px solid #0f5a47;
 
 }
 
-.review__icon:last-child{
+.review__item:last-child{
     margin-right: 0;
 }
 
-.review__pic{
+.review__icon{
     display: block;
     object-fit: cover;
     width: 100%;

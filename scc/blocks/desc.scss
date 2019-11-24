@@ -1,26 +1,29 @@
 
 .desc{
     display: flex;
+    margin-top: auto;
+    padding-bottom: 50px;
+    align-items: center;
 }
 
 .desc__list{
     display: flex;
     justify-content: space-between;
-    padding: 0;
+
   }
 
-.desc__list--vertical{
-    display: flex;
-    flex-direction: row;
-
+.desc__list--left{
+    width: 470px;
 }
 
-
+.desc__list--left .desc__item{
+    width: calc(100%/3 - 48px);
+}
 
 .desc__item{
     display: flex;
-    padding-right: 48px;
     font-size: 16px;
+    position: relative;
 }
 
 .desc__item:last-child{
@@ -35,7 +38,7 @@
     
 }
 .desc--comment{
-    background: url(../../img/icon/comment_sec/pattern_comment.png);
+    background: url(../../img/icon/comment_sec/pattern_comment.png) no-repeat;
     margin-bottom: 20px;
 }
 
@@ -67,7 +70,7 @@
 .desc__list--vertical .desc__pic{
     height: 125px;
      width: 125px;
-     background-color: #f2f5f4;
+     background-color: $white-grey;
      border-radius: 50%;
  }
 
@@ -76,8 +79,26 @@
 .desc__list--vertical .desc__item{
     display: flex;
     flex-direction: column;
-    ALIGN-ITEMS: center;
+    align-items: center;
     text-align: center;
+    width: calc(100%/3 - 38px);
+    
+}
+
+.desc__list--vertical .desc__item:after{
+    content: "";
+    position: absolute;
+    background: url(..//..//img/icon/why_sect/between.png) no-repeat center center;
+    width: 100%;
+    height: 20px;
+    display: block;
+    justify-content: center;
+    transform: translateX(60%);
+    top: 50px;
+}
+
+.desc__list--vertical .desc__item:last-child::after{
+    display: none;
 }
 
 .desc__title{
@@ -107,5 +128,6 @@
 .desc__author{
     font-family: 'Alegreya Sans Medium', Arial, sans-serif;
     color: #666666;
+    font-size: 18px;
 }
 

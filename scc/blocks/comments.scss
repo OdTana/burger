@@ -1,0 +1,17 @@
+
+.comments{
+  position: relative;
+  background:url(../../img/icon/comment_sec/strawberry.png) right 5% no-repeat;
+}
+
+.comments:after{
+  content: '';
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  background:  
+  url(../../img/icon/comment_sec/sev_berries.png) left 110% no-repeat;
+
+}
+ 

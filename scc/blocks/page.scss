@@ -1,0 +1,50 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content--left{
+    width: 470px;
+    align-items: flex-start;
+}
+
+  
+  .page--color-white{
+    color: $white;
+  }
+
+  .page{
+    position: relative;
+    background: 
+     url(../../img/icon/chocco_sect/bars.png) 95% 27% no-repeat,
+     url(../../img/icon/chocco_sect/pattern.png) no-repeat;
+     background-size: auto,cover;
+    
+    }
+  
+  
+  .page:after{
+    content: '';
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background:  
+    url(../../img/icon/chocco_sect/gr_berries.png) no-repeat 95% bottom ,
+    url(../../img/icon/chocco_sect/leaf3.png) no-repeat  4% bottom;
+    transform: translateY(5%);
+  
+  }
+
+
+  .content__container--left{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content__container{
+    display: flex;
+    justify-content: center;
+  }
