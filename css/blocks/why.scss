@@ -9,12 +9,13 @@
 .why:after{
   content: '';
   overflow: hidden;
-  min-width: 100%;
-  min-height: 100%;
+  width: 165px;
+  height: 225px;
   position: absolute;
   background:  
   url(../../img/icon/why_sect/raspberry.png) left bottom no-repeat;
   transform: translateY(5%);
+  bottom: -5%;
 }
 
 

@@ -2,7 +2,7 @@
 .desc{
     display: flex;
     margin-top: auto;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     align-items: center;
 }
 
@@ -17,29 +17,44 @@
 }
 
 .desc__list--left .desc__item{
-    width: calc(100%/3 - 48px);
+    width: calc(100%/3 - 16px);
+}
+
+.desc__list--left .desc__icon{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+
 }
 
 .desc__item{
     display: flex;
     font-size: 16px;
     position: relative;
+    align-items: center;
+
 }
 
 .desc__item:last-child{
     padding-right: 0;
 }
 
+.desc__list--left .desc__item:hover{
+    color: $green;
+    cursor: pointer;
+}
+
 .desc--comment .desc__pic{
     width: 255px;
     height: 255px;
-    margin-bottom: 0;
-    margin: 50px 20px 37px 50px;
+    margin-right: 20px;
+    flex-shrink: 0; //чтобы картинка не схлопывалась, если не будет задан flex-basis//
     
 }
 .desc--comment{
     background: url(../../img/icon/comment_sec/pattern_comment.png) no-repeat;
-    margin-bottom: 20px;
+    padding: 50px 20px 37px 50px;
 }
 
 
@@ -54,16 +69,16 @@
 .desc__comment{
     display: flex;
     flex-direction: column;
-    margin: 50px 20px 37px 0;
     flex-basis: 47%;
     justify-content: center;
+    
 
 }
 .desc__pic{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
+
 
 }
 
@@ -72,6 +87,7 @@
      width: 125px;
      background-color: $white-grey;
      border-radius: 50%;
+     margin-bottom: 50px;
  }
 
 
@@ -115,19 +131,25 @@
 .desc__list--vertical .desc__text{
     font-family: 'Alegreya Sans Light', Arial, sans-serif;
     font-size: 18px;
-    color: #666666;
+    color: $grey;
     padding-left: 0;
+}
+
+.desc__list--vertical .desc__icon{
+    width: 70px;
+    height: 70px;
+
 }
 .desc__comment .desc__text{
     font-size: 18px;
-    color: #666666;
+    color: $grey;
     padding-left: 0;
     margin-bottom: 35px;
 }
 
 .desc__author{
     font-family: 'Alegreya Sans Medium', Arial, sans-serif;
-    color: #666666;
+    color: $grey;
     font-size: 18px;
 }
 

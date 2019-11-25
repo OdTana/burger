@@ -1,0 +1,28 @@
+
+  .header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    margin-bottom: auto;
+  }
+
+  .phone__number, .logo{
+    font-size: 24px;
+  }
+
+  .phone{
+    display: inline-block;
+  }
+  
+.phone:before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../../img/icon/chocco_sect/phone__icon.png) no-repeat center center;
+}
+
+ .logo{
+  max-width: 60px;
+}

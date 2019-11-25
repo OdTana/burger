@@ -8,7 +8,16 @@
         font-size: 19px;
         text-transform: uppercase;
         font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif;
+        border: 1px solid transparent;
+        outline: unset;
+        cursor: pointer;
         
 }
 
+.order-button:focus{
+        border-color: $green;
+}
 
+.order-button:hover{
+        background-color: $white-grey;
+}

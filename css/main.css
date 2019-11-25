@@ -432,15 +432,8 @@ a {
 
 .container {
   width: 940px;
-  margin: 0 auto; }
-
-.page__container--left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  margin: 0 auto;
+  z-index: 1; }
 
 .wrapper {
   position: relative;
@@ -489,27 +482,40 @@ img {
 
 .page {
   position: relative;
-  background: url(../../img/icon/chocco_sect/bars.png) 95% 27% no-repeat, url(../../img/icon/chocco_sect/pattern.png) no-repeat;
-  background-size: auto,cover; }
+  background: url(../../img/icon/chocco_sect/pattern.png) no-repeat;
+  background-size: cover;
+  z-index: 1; }
 
 .page:after {
   content: '';
   overflow: hidden;
   min-width: 100%;
-  min-height: 100%;
+  height: 340px;
   position: absolute;
   background: url(../../img/icon/chocco_sect/gr_berries.png) no-repeat 95% bottom, url(../../img/icon/chocco_sect/leaf3.png) no-repeat 4% bottom;
-  -webkit-transform: translateY(5%);
-  -ms-transform: translateY(5%);
-  transform: translateY(5%); }
+  bottom: -5%;
+  z-index: -1; }
 
-.content__container--left {
+.page__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page__container--left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+
+.page__container--left .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .content__container {
   display: -webkit-box;
@@ -534,6 +540,19 @@ img {
 
 .phone__number, .logo {
   font-size: 24px; }
+
+.phone {
+  display: inline-block; }
+
+.phone:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../../img/icon/chocco_sect/phone__icon.png) no-repeat center center; }
+
+.logo {
+  max-width: 60px; }
 
 .nav__list {
   display: -webkit-box;
@@ -590,14 +609,23 @@ img {
   color: #0f5a47;
   font-size: 19px;
   text-transform: uppercase;
-  font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif; }
+  font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif;
+  border: 1px solid transparent;
+  outline: unset;
+  cursor: pointer; }
+
+.order-button:focus {
+  border-color: #0f5a47; }
+
+.order-button:hover {
+  background-color: #f2f5f4; }
 
 .desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: auto;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -614,27 +642,45 @@ img {
   width: 470px; }
 
 .desc__list--left .desc__item {
-  width: calc(100%/3 - 48px); }
+  width: calc(100%/3 - 16px); }
+
+.desc__list--left .desc__icon {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .desc__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 16px;
-  position: relative; }
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .desc__item:last-child {
   padding-right: 0; }
 
+.desc__list--left .desc__item:hover {
+  color: #0f5a47;
+  cursor: pointer; }
+
 .desc--comment .desc__pic {
   width: 255px;
   height: 255px;
-  margin-bottom: 0;
-  margin: 50px 20px 37px 50px; }
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
 
 .desc--comment {
   background: url(../../img/icon/comment_sec/pattern_comment.png) no-repeat;
-  margin-bottom: 20px; }
+  padding: 50px 20px 37px 50px; }
 
 .desc--comment .desc__icon {
   display: block;
@@ -652,7 +698,6 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 50px 20px 37px 0;
   -ms-flex-preferred-size: 47%;
   flex-basis: 47%;
   -webkit-box-pack: center;
@@ -668,14 +713,14 @@ img {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: 40px; }
+  justify-content: center; }
 
 .desc__list--vertical .desc__pic {
   height: 125px;
   width: 125px;
   background-color: #f2f5f4;
-  border-radius: 50%; }
+  border-radius: 50%;
+  margin-bottom: 50px; }
 
 .desc__list--vertical .desc__item {
   display: -webkit-box;
@@ -724,6 +769,10 @@ img {
   color: #666666;
   padding-left: 0; }
 
+.desc__list--vertical .desc__icon {
+  width: 70px;
+  height: 70px; }
+
 .desc__comment .desc__text {
   font-size: 18px;
   color: #666666;
@@ -743,27 +792,36 @@ img {
 
 .pages__elips {
   display: block;
-  width: 7px;
-  height: 7px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  position: relative;
-  margin-bottom: 15px; }
-
-.pages__elips--active:before {
-  content: '';
-  display: block;
   width: 20px;
   height: 20px;
   background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 5px;
+  border: 1px solid transparent; }
+
+.pages__elips:before {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border: 1px solid #fff; }
+  transform: translate(-50%, -50%); }
+
+.pages__elips--active {
+  display: block;
+  border: 1px solid #ffffff; }
+
+.pages__item {
+  display: block;
+  width: 100%;
+  height: 100%; }
 
 .why {
   position: relative;
@@ -772,13 +830,14 @@ img {
 .why:after {
   content: '';
   overflow: hidden;
-  min-width: 100%;
-  min-height: 100%;
+  width: 165px;
+  height: 225px;
   position: absolute;
   background: url(../../img/icon/why_sect/raspberry.png) left bottom no-repeat;
   -webkit-transform: translateY(5%);
   -ms-transform: translateY(5%);
-  transform: translateY(5%); }
+  transform: translateY(5%);
+  bottom: -5%; }
 
 .comments {
   position: relative;
@@ -787,10 +846,11 @@ img {
 .comments:after {
   content: '';
   overflow: hidden;
-  min-width: 100%;
-  min-height: 100%;
+  width: 140px;
+  height: 200px;
   position: absolute;
-  background: url(../../img/icon/comment_sec/sev_berries.png) left 110% no-repeat; }
+  background: url(../../img/icon/comment_sec/sev_berries.png) no-repeat;
+  bottom: 0; }
 
 .review {
   display: -webkit-box;
@@ -798,7 +858,10 @@ img {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .review__item {
   width: 70px;
@@ -819,3 +882,96 @@ img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
+
+.team {
+  position: relative;
+  background: url(../../img/icon/team_sec/pattern_team.png) right top no-repeat; }
+
+.team:after {
+  content: '';
+  overflow: hidden;
+  width: 145px;
+  height: 115px;
+  position: absolute;
+  background: url(../../img/icon/team_sec/blueberries.png) no-repeat;
+  bottom: 85%;
+  left: 85%; }
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.team__item {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.team__pic {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.team__name {
+  font-family: 'Alegreya Sans Medium', Arial, sans-serif;
+  font-size: 21px;
+  color: #323232;
+  margin-bottom: 10px;
+  display: inline-block;
+  cursor: pointer; }
+
+.team__name:after {
+  content: "";
+  background: url(../../img/icon/team_sec/polygon.png) no-repeat center center;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  padding-left: 5px; }
+
+.team__item--active .team__name {
+  color: yellow; }
+
+.team__item--active .team__name:after {
+  background: url(../../img/icon/team_sec/polygon_active.png) no-repeat center center; }
+
+.team__comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0; }
+
+.team__item--active .team__comment {
+  overflow: visible;
+  opacity: 1; }
+
+.team__text {
+  font-family: 'Alegreya Sans Light', Arial, sans-serif;
+  font-size: 18px;
+  color: #666666;
+  text-align: center; }
