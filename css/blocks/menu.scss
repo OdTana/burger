@@ -11,6 +11,7 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .menu:before{
@@ -55,6 +56,10 @@
 
 .menu__accordion{
     display: flex;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    right: 0;
 }
 
 .menu__title h2{

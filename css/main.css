@@ -959,7 +959,8 @@ img {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .menu:before {
   content: '';
@@ -1008,7 +1009,11 @@ img {
 .menu__accordion {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  right: 0; }
 
 .menu__title h2 {
   font-size: 48px;
