@@ -53,7 +53,7 @@
 
 .team__name:after{
   content: "";
-  background: url(../img/icon/team_sec/polygon.png) no-repeat center center;
+  background: url(../img/icon/team_sec/polygon.svg) no-repeat center center;
   width: 10px;
   height: 10px;
   display: inline-block;
@@ -66,7 +66,7 @@
 }
 
 .team__item--active .team__name:after{
-  background: url(../img/icon/team_sec/polygon_active.png) no-repeat center center;
+  background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
 }
 
 .team__comment{
@@ -99,7 +99,7 @@
   color: yellow;
 } 
 .team__item:active .team__name:after{
-  background: url(../img/icon/team_sec/polygon_active.png) no-repeat center center;
+  background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
 }
 
 
