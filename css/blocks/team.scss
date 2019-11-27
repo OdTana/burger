@@ -1,7 +1,7 @@
 
 .team{
   position: relative;
-  background:url(../../img/icon/team_sec/pattern_team.png) right top no-repeat;
+  background:url(../img/icon/team_sec/pattern_team.png) right top no-repeat;
 }
 
 .team:after{
@@ -11,7 +11,7 @@
   height: 115px;
   position: absolute;
   background:  
-  url(../../img/icon/team_sec/blueberries.png) no-repeat;
+  url(../img/icon/team_sec/blueberries.png) no-repeat;
   bottom: 85%;
   left: 85%;
 
@@ -53,7 +53,7 @@
 
 .team__name:after{
   content: "";
-  background: url(../../img/icon/team_sec/polygon.png) no-repeat center center;
+  background: url(../img/icon/team_sec/polygon.png) no-repeat center center;
   width: 10px;
   height: 10px;
   display: inline-block;
@@ -66,7 +66,7 @@
 }
 
 .team__item--active .team__name:after{
-  background: url(../../img/icon/team_sec/polygon_active.png) no-repeat center center;
+  background: url(../img/icon/team_sec/polygon_active.png) no-repeat center center;
 }
 
 .team__comment{
@@ -76,6 +76,7 @@
   // height: 0;
 //  overflow: hidden;
  opacity: 0;
+
 }
 
 .team__item--active .team__comment{
@@ -93,20 +94,24 @@
 
 }
 
+
+.team__item:active .team__name{
+  color: yellow;
+} 
+.team__item:active .team__name:after{
+  background: url(../img/icon/team_sec/polygon_active.png) no-repeat center center;
+}
+
+
+.team__item:active .team__comment{
+  overflow: visible;
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+
 // .team__item:nth-child(even){
-//     margin-top: 20px;
-// }
-
-// .team__item:active .team__name{
-//   color: yellow;
-// } 
-// .team__item:active .team__name:after{
-//   background: url(../../img/icon/team_sec/polygon_active.png) no-repeat center center;
-// }
-
-
-// .team__item:active .team__comment{
-//   overflow: visible;
-//   height: 100%;
-//   opacity: 1;
+//   margin-top: 20px;
 // }
