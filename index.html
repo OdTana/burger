@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <button type="button" class="order-button">Заказать</button>
+                    <button type="submit" class="order-button">Заказать</button>
                 </div>
             </div>
             <div class="content content--right">
@@ -271,6 +271,90 @@
                 </ul>
             </div>
 
+        </div>
+    </section>
+    <section class="section order">
+        <div class="container order__container">
+            <div class="content form">
+                <h2 class="about__title">Закажите доставку</h2>
+                <form action="" class="form__element">
+                    <div class="form__col">
+                        <div class="form__row">
+                            <lable class="form__block">
+                                <div class="form__block__title">Имя</div>
+                                <input type="text" class="form__input">
+                            </lable>
+                            <lable class="form__block">
+                                <div class="form__block__title">Телефон</div>
+                                <input type="tel" class="form__input" placeholder="89022348912">
+                            </lable>
+                        </div>
+                        <div class="form__row">
+                            <lable class="form__block">
+                                <div class="form__block__title">Улица</div>
+                                <input type="text" class="form__input">
+                            </lable>
+                        </div>
+                        <div class="form__row">
+                            <lable class="form__block">
+                                <div class="form__block__title">Дом</div>
+                                <input type="number" class="form__input">
+                            </lable>
+                            <lable class="form__block">
+                                <div class="form__block__title">Корпус</div>
+                                <input type="number" class="form__input">
+                            </lable>
+                            <lable class="form__block">
+                                <div class="form__block__title">Квартира</div>
+                                <input type="number" class="form__input">
+                            </lable>
+                            <lable class="form__block">
+                                <div class="form__block__title">Этаж</div>
+                                <input type="number" class="form__input">
+                            </lable>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__row">
+                            <lable class="form__block">
+                                <div class="form__block__title">Комментарий</div>
+                                <textarea class=" form__input form__input--textarea "></textarea>
+                            </lable>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__question">
+                                <label class="option option--check">
+                                    <input type="radio" name="pay" class="option__radio" checked>
+                                    <div class="option__radio-fake"></div>
+                                    <div class="option__title">Потребуется сдача</div>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="pay" class="option__radio">
+                                    <div class="option__radio-fake"></div>
+                                    <div class="option__title">Оплата по карте</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__question">
+                                <lable class="option option--check">
+                                    <input type="checkbox" class="option__checkbox" checked>
+                                    <div class="option__checkbox-fake"></div>
+                                    <div class="option__title">Не перезванивать</div>
+                                </lable>
+                            </div>
+                        </div>
+                        <div class="form__row form__row-last">
+                            <div class="button button--color--green">
+                                <button type="submit" class="order-button ">Заказать</button>
+                            </div>
+                            <div class="button button--color--none">
+                                <button type="reset" class="order-button">Очистить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
     <section class="section contacts">

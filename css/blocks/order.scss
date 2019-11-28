@@ -1,0 +1,177 @@
+.order{
+    background: url(../../img/icon/order_sec/pattern_order.png) center center no-repeat;
+    background-size: cover;
+}
+
+.order:after{
+    content: '';
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: url(../img/icon/order_sec/berry_order.png) no-repeat;
+    bottom: 80px;
+    left: 20px;
+}
+
+.order:before{
+    content: '';
+    overflow: hidden;
+    width: 135px;
+    height: 190px;
+    position: absolute;
+    background: url(../img/icon/order_sec/leaf_order.png) no-repeat;
+    bottom: 80px;
+    right: 20px;
+
+}
+
+
+.form{
+    color: $green;
+}
+
+.form__element{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+
+.form__col{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form__col:last-child{
+    margin-right: 0;
+}
+
+.form__row{
+    display: flex;
+   margin-bottom: 16px;
+}
+
+.form__row-last{
+    margin-top: 25px;
+} 
+
+.form__block{
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form__block:last-child{
+    margin-right: 0;
+}
+
+
+.form__block__title{
+    margin-bottom: 7px;
+}
+
+
+.form__input {
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+    padding: 20px 10px;
+    border: 1px solid transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: $black;
+    outline: none;
+}
+
+.form__input--textarea{
+    height: 180px;
+    resize: none; //вширину нельзя было раздвинуть//
+}
+.form__input:focus{
+    border-color: #dde3bd;
+}
+
+.form__question{
+    display: flex;
+}
+
+.option{
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+}
+
+.option__radio {
+    display: none;
+}
+
+.option__radio-fake {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 12px;
+}
+
+.option__radio-fake::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: $green;
+  
+}
+
+.option__radio:checked + .option__radio-fake:after {
+    height: 15px;
+    width: 15px;
+}
+
+.option__checkbox{
+    display: none;
+}
+
+.option__checkbox-fake {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    position: relative;
+    margin-right: 12px;
+    cursor: pointer;
+
+}
+
+.option__checkbox-fake::after{
+    content: " ";
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(..//img/icon/order_sec/check.png) center center no-repeat;
+}       
+
+
+.option__checkbox:checked + .option__checkbox-fake::after{
+    content: "";
+    position: absolute;
+}
+
+
+// .option__checkbox:checked + .option__checkbox-fake::after{
+//     content: "";
+//     position: absolute;
+// }

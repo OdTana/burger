@@ -21,3 +21,26 @@
 .order-button:hover{
         background-color: $white-grey;
 }
+
+.button--color--green .order-button{
+        background-color: $green;
+        color: $white;
+    
+    }
+    
+ .button--color--green .order-button:hover {
+        background-color: $white;
+        color: $green;
+        border-color: $green;
+    }
+    
+.button--color--none .order-button{
+        background-color: transparent;
+        font-family: inherit;
+        text-transform: none;
+}
+
+.button--color--none .order-button:hover {
+        color: $white;
+       
+    }
