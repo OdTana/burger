@@ -3,12 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 22px;
-    margin-bottom: auto;
+    padding-top: rem(22px) ;
+  
+   
   }
 
   .phone__number, .logo{
-    font-size: 24px;
+    font-size: rem(24px) ;
   }
 
   .phone{
@@ -18,11 +19,11 @@
 .phone:before{
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: rem(20px) ;
+  height: rem(20px) ;
   background: url(../img/icon/chocco_sect/phone__icon.png) no-repeat center center;
 }
 
  .logo{
-  max-width: 60px;
+  max-width: rem(60px) ;
 }

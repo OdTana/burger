@@ -1,13 +1,25 @@
 
 .info__title{
-    font-size: 60px;
+    font-size: rem(60px) ;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px) ;
     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+
+    @include phones {
+        font-size: rem(48px) ;
+    }
 }
 
 .info__text{
-    font-size: 21px;
-    margin-bottom: 30px;
+    font-size: rem(21px) ;
+    margin-bottom: rem(30px) ;
+
+    @include tablets {
+        padding: 0 20%; 
+    }
+
+    @include phones {
+        padding: 0 20%;
+    }
 }
 

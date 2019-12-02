@@ -18,7 +18,7 @@
 
 .contacts__points{
     position: absolute;
-    height: 95px;
+    height: rem(95px) ;
     display: flex;
     align-items: center;
    width: 100%;
@@ -32,7 +32,7 @@
     align-items: center;
 }
 .contacts__street{
-    font-size: 21px;
+    font-size: rem(21px) ;
 }
 
 .contacts__phone{
@@ -48,7 +48,7 @@
 .contacts__adress .phone:before{
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: rem(20px) ;
+    height: rem(20px) ;
     background: url(../img/icon/contacts_sec/phone_green.png)  center center no-repeat;
 }

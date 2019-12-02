@@ -4,18 +4,39 @@
   position: relative;
   background: url(../img/icon/why_sect/pattern_why.png) no-repeat center left;
   
+  @include phones {
+    background: none;
+  }
 }
 
 .why:after{
   content: '';
   overflow: hidden;
-  width: 165px;
-  height: 225px;
+  width: rem(165px);
+  height: rem(240px);
   position: absolute;
   background:  
   url(../img/icon/why_sect/raspberry.png) left bottom no-repeat;
-  transform: translateY(5%);
-  bottom: -5%;
+  transform: translateY(50%);
+  bottom: 0;
+  
+
+  @include phones {
+    display: none;
+  }
 }
 
 
+// .why__container .desc__list{
+//   @include tablets {
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+
+//   }
+
+//   @include phones {
+//     align-items: center;
+//     width: 100%;
+//   }
+// }

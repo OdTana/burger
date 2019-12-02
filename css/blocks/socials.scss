@@ -3,7 +3,7 @@
 }
 
 .socials__item{
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
 
 .socials__item:last-child{
@@ -11,8 +11,8 @@
 }
 
 .socials__link{
-    width: 22px;
-    height: 22px;
+    width: rem(22px);
+    height: rem(22px);
     display: block;
 }
 

@@ -1,28 +1,45 @@
 .order{
-    background: url(../../img/icon/order_sec/pattern_order.png) center center no-repeat;
+    background-image: url(../../img/icon/order_sec/pattern_order.png);
+    background-repeat: no-repeat; 
+    background-position: center center; 
     background-size: cover;
+
 }
 
 .order:after{
     content: '';
     overflow: hidden;
-    width: 50px;
-    height: 50px;
+    width: rem(50px);
+    height: rem(50px);
     position: absolute;
     background: url(../img/icon/order_sec/berry_order.png) no-repeat;
-    bottom: 80px;
-    left: 20px;
+    bottom: 17%;
+    left: 5%;
+
+    @include tablets {
+        display: none;
+    }
+    @include phones {
+        display: none;
+    }
 }
 
 .order:before{
     content: '';
     overflow: hidden;
-    width: 135px;
-    height: 190px;
+    width: rem(135px);
+    height: rem(190px);
     position: absolute;
     background: url(../img/icon/order_sec/leaf_order.png) no-repeat;
-    bottom: 80px;
-    right: 20px;
+    bottom: 17%;
+    right: 5%;
+
+    @include tablets {
+        display: none;
+    }
+    @include phones {
+        display: none;
+    }
 
 }
 
@@ -34,14 +51,23 @@
 .form__element{
     width: 100%;
     display: flex;
-    margin-top: 30px;
+    margin-top: rem(30px);
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .form__col{
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
+
+    @include tablets {
+        margin-right: 0;
+        
+    }
 }
 
 .form__col:last-child{
@@ -50,16 +76,21 @@
 
 .form__row{
     display: flex;
-   margin-bottom: 16px;
+    margin-bottom: rem(16px);
+
+    @include tablets {
+    justify-content: center;
+    
+    }
 }
 
 .form__row-last{
-    margin-top: 25px;
+    margin-top: rem(25px);
 } 
 
 .form__block{
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
 
 .form__block:last-child{
@@ -68,28 +99,27 @@
 
 
 .form__block__title{
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
 }
 
 
 .form__input {
     width: 100%;
-    border: none;
     background-color: #ffffff;
-    padding: 20px 10px;
+    padding: rem(20px) rem(10px);
     border: 1px solid transparent;
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: rem(18px);
     color: $black;
     outline: none;
 }
 
 .form__input--textarea{
-    height: 180px;
+    height: rem(180px);
     resize: none; //вширину нельзя было раздвинуть//
 }
 .form__input:focus{
-    border-color: #dde3bd;
+    border: 1px solid #dde3bd;
 }
 
 .form__question{
@@ -98,7 +128,7 @@
 
 .option{
     display: flex;
-    margin-right: 25px;
+    margin-right: rem(25px);
     align-items: center;
 }
 
@@ -108,13 +138,13 @@
 
 .option__radio-fake {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     border: 1px solid transparent;
     background-color: #ffffff;
     border-radius: 50%;
     position: relative;
-    margin-right: 12px;
+    margin-right: rem(12px);
 }
 
 .option__radio-fake::after{
@@ -132,8 +162,8 @@
 }
 
 .option__radio:checked + .option__radio-fake:after {
-    height: 15px;
-    width: 15px;
+    height: rem(15px);
+    width: rem(15px);
 }
 
 .option__checkbox{
@@ -142,12 +172,12 @@
 
 .option__checkbox-fake {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     border: 1px solid transparent;
     background-color: #ffffff;
     position: relative;
-    margin-right: 12px;
+    margin-right: rem(12px);
     cursor: pointer;
 
 }
@@ -156,8 +186,8 @@
     content: " ";
     display: inline-block;
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

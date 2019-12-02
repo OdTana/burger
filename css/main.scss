@@ -1,6 +1,8 @@
 @import '../css/layout/variables.scss';
-@import '../css/layout/fonts.scss';
+
 @import '../css/layout/normalize.scss';
+@import '../css/layout/fonts.scss';
+@import '../css/layout/media.scss';
 @import '../css/layout/base.scss';
 
 @import '../css/blocks/page.scss';
@@ -19,3 +21,4 @@
 @import '../css/blocks/contacts.scss';
 @import '../css/blocks/socials.scss';
 @import '../css/blocks/order.scss';
+@import '../css/blocks/gamburger.scss';

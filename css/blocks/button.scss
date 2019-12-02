@@ -1,17 +1,27 @@
-
+.button{
+        @include tablets {
+                text-align: center;
+        }
+    
+        @include phones {
+                text-align: center;
+        }
+            
+}
 
 .order-button{
         background-color: rgb(255, 255, 255);
-        padding: 23px 34px;
-        border-radius: 45px;
+        padding: rem(23px) rem(34px);
+        border-radius: rem(45px);
         color: $green;
-        font-size: 19px;
+        font-size: rem(19px);
         text-transform: uppercase;
         font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif;
         border: 1px solid transparent;
         outline: unset;
         cursor: pointer;
-        
+
+       
 }
 
 .order-button:focus{

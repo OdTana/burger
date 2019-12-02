@@ -17,12 +17,13 @@
 .menu:before{
     content: '';
     overflow: hidden;
-    width: 105px;
-    height: 110px;
+    width: rem(125px) ;
+    height: rem(130px) ;
     position: absolute;
     background: url(../img/icon/menu_sec/ruspberry_menu.png) no-repeat;
-    bottom: 95%;
-    left: 5%;
+    transform: translateY(-50%);
+    top: 0;
+
 }
 
 .menu__content{
@@ -44,12 +45,12 @@
     justify-content: flex-start;
     margin: 0;
     width: 100%;
-    padding-left: 80px;
+    padding-left: rem(50px) ;
 }
 
 .menu__base h2{
-    font-size: 48px;
-    padding-top: 100px;
+    font-size: rem(48px) ;
+    padding-top: rem(100px) ;
     text-transform: uppercase;
     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
 }
@@ -58,25 +59,33 @@
     display: flex;
     position: absolute;
     height: 100%;
-    width: 70%;
+    max-width: 70%;
     right: 0;
+
+    @include phones {
+        max-width: 100%;
+    }
 }
 
 .menu__title h2{
-    font-size: 48px;
+    font-size: rem(48px) ;
     transform: rotate(-180deg);
     white-space: nowrap;
     font-family: 'Alegreya Sans Medium', Arial, sans-serif;
     text-transform: none;
     writing-mode: vertical-rl;
+
+    @include phones {
+        font-size: rem(36px)
+      }
     
 }
 
 .menu__title{
     display: flex;
-    padding-bottom: 45px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-bottom: rem(45px);
+    padding-left: rem(30px);
+    padding-right: rem(30px);
     
 }
 
@@ -99,7 +108,7 @@
 }
 
 .menu__text{
-    font-size: 16px;
+    font-size: rem(16px);
     display: flex;
     margin: 0;
     flex: 1;
@@ -123,8 +132,8 @@
     content: "";
     position: absolute;
     background: url(../img/icon/menu_sec/close.svg) top right no-repeat;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     z-index: 3;
     display: flex;
     top: 2%;
@@ -141,9 +150,9 @@
 
 
 .menu__text p{
-    padding-left: 28px;
-    padding-right: 25px;
-    padding-top: 50px;
+    padding-left: rem(28px);
+    padding-right: rem(25px);
+    padding-top: rem(50px);
     z-index: 3;
 }
 
@@ -151,3 +160,4 @@
     overflow: visible;
     width: 100%;
 }
+

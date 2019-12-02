@@ -1,11 +1,24 @@
+html{
+  font-size: rem(16px);
+
+  @include tablets {
+    font-size: 15px;
+  }
+  
+  @include phones {
+    font-size: 14px;
+  }
+
+}
+
 html, body {
   height: 100%;
 }
 
 body {
-    margin: 0px;
+    margin: rem(0px);
     font-family: 'Alegreya Sans Regular', Arial, sans-serif;
-    font-size: 18px;
+    font-size: rem(18px);
     color: $black;
   }
 
@@ -30,24 +43,40 @@ a {
 
 .section{
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 
 .container {
-  width: 940px;
+  
+  max-width: rem(940px);
+  width: 85%; //для адаптивной верстки//
+  height: 100%;
   margin: 0 auto;
-  z-index: 1; //чтобы отображались наведения ладошкой на все ссылки/кнопки//
+  z-index: 1; //чтобы отображались наведения ладошкой на все ссылки/кнопки/ из-за большого бэкграунда/
+
+  @include tablets {
+    max-width: rem(730px);
+    width: 70%;
+
+  }  
+
+  @include phones {
+    max-width: rem(460px);
+    width: 95%;
+  }
 }
 
 
 .wrapper {
     position: relative;
     overflow: hidden;
-    min-width: 1100px;
+    width: 100%;
+    // min-width: rem(1100px);
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -63,5 +92,6 @@ ul, p, h5 {
 img{
     max-width: 100%;
     max-height: 100%;
+    display: block;
   }
   
