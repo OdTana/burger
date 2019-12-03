@@ -185,23 +185,24 @@
 .option__checkbox-fake::after{
     content: " ";
     display: inline-block;
-    position: relative;
-    width: rem(25px);
-    height: rem(25px);
+    background: transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(..//img/icon/order_sec/check.png) center center no-repeat;
+    border-radius: 50%;
+    
+    
 }       
 
 
 .option__checkbox:checked + .option__checkbox-fake::after{
-    content: "";
-    position: absolute;
+    width: rem(25px);
+    height: rem(25px);
+    background: url(..//img/icon/order_sec/check.png) center center no-repeat;
+   
 }
 
 
-// .option__checkbox:checked + .option__checkbox-fake::after{
-//     content: "";
-//     position: absolute;
-// }

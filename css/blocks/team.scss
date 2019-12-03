@@ -23,12 +23,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
- 
 
   @include tablets {
     margin-right: rem(-20px);
-
+    height: 100%;
   }
   
 }
@@ -90,7 +88,7 @@
 }
 
 .team__item--active .team__name{
-  color: yellow;
+  color: $green;
 
 }
 
@@ -125,8 +123,10 @@
 
 
 .team__item:active .team__name{
-  color: yellow;
+  color: $green;
 } 
+
+
 .team__item:active .team__name:after{
   background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
 }

@@ -30,6 +30,7 @@
     height: 100%;
     display: flex;
     width: 100%;
+    margin-bottom: 0;
 }
 
 .menu__list{
@@ -86,7 +87,18 @@
     padding-bottom: rem(45px);
     padding-left: rem(30px);
     padding-right: rem(30px);
+
+    @include tablets {
+        padding-bottom: rem(40px);
+        padding-left: rem(25px);
+        padding-right: rem(25px);
+        }
     
+    @include phones {
+      padding-bottom: rem(30px);
+      padding-left: rem(25px);
+      padding-right: rem(25px);
+    }
 }
 
 .menu__title-1 {

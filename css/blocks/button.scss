@@ -1,6 +1,7 @@
 .button{
         @include tablets {
                 text-align: center;
+                
         }
     
         @include phones {

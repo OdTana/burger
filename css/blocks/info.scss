@@ -15,11 +15,13 @@
     margin-bottom: rem(30px) ;
 
     @include tablets {
-        padding: 0 20%; 
+        padding: 0 10%; 
     }
 
     @include phones {
-        padding: 0 20%;
-    }
+        padding: 0 10%;
+        font-size: rem(18px);
+        margin-bottom: rem(25px);
+        }
 }
 

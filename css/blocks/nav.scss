@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
+    white-space: nowrap;
     @include tablets {
         display: none;
     }
@@ -13,7 +15,8 @@
 
 .nav__list{
     display: flex;
-    margin-right: rem(45px);
+    margin-right: rem(40px);
+    margin-left: rem(40px);
     justify-content: space-between;
 
   }
