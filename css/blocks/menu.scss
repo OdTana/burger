@@ -21,8 +21,19 @@
     height: rem(130px) ;
     position: absolute;
     background: url(../img/icon/menu_sec/ruspberry_menu.png) no-repeat;
+    background-size: contain;
     transform: translateY(-50%);
     top: 0;
+    left: 0;
+    z-index: 1;
+    @include tablets {
+        width: rem(100px);
+        height: rem(100px);
+      }
+    @include phones {
+        width: rem(100px);
+        height: rem(100px);
+      }
 
 }
 
@@ -140,17 +151,21 @@
     width: 100%;
     height: 100%;
 }
+
+
 .menu__text:before{
+    @include phones {
     content: "";
     position: absolute;
-    background: url(../img/icon/menu_sec/close.svg) top right no-repeat;
+    background: url(../img/icon/menu_sec/close.svg) center center no-repeat;
     width: rem(25px);
     height: rem(25px);
     z-index: 3;
     display: flex;
     top: 2%;
     right: 5%;
-
+    }   
+     
 }
 
 

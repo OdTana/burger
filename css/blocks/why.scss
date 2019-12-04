@@ -19,8 +19,12 @@
   url(../img/icon/why_sect/raspberry.png) left bottom no-repeat;
   transform: translateY(50%);
   bottom: 0;
-
+  left: 0;
+  z-index: 1;
   @include phones {
+    display: none;
+  }
+  @include tablets {
     display: none;
   }
 }

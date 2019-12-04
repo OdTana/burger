@@ -32,6 +32,9 @@
 .content--right{
     max-width: rem(490px);
     max-height: rem(510px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 
     @include tablets {
@@ -73,7 +76,34 @@
        background-size: auto;
     }
   }
-  
+
+  .page::before{
+    content: '';
+    overflow: hidden;
+    width: rem(60px);
+    height: rem(110px);
+    position: absolute;
+    background:  
+    url(../img/icon/chocco_sect/leaf3.png) no-repeat;
+    background-size: contain;
+    transform: translateY(50%);
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    
+    @include tablets {
+      width: rem(40px);
+      height: rem(70px);
+      bottom: 65%;
+      left: 25%;
+      
+    }
+    @include phones {
+      left: 15%;
+    }
+
+}
+
   
 .page:after{
     content: '';
@@ -83,23 +113,23 @@
     height: rem(350px);
     position: absolute;
     background:  
-    url(../img/icon/chocco_sect/gr_berries.png) no-repeat 95% bottom ,
-    url(../img/icon/chocco_sect/leaf3.png) no-repeat  4% bottom;
-    bottom: -11%;
-    right: 2%;
+    url(../img/icon/chocco_sect/gr_berries.png) no-repeat;
+    background-size: contain;
+    transform: translateY(20%);
+    bottom: 0;
+    right: 0;
     z-index: 1;
     
     @include tablets {
-      max-width: rem(430px);
-      bottom: 50%;
+      width: rem(300px);
+      height: rem(245px);
+      bottom: 55%;
       right: 20%;
       z-index: 1;
     }
     @include phones {
-      max-width: rem(330px);
-      bottom: 55%;
-      right: 0;
-      z-index: 1;
+      bottom: 60%;
+      
     }
 
 }

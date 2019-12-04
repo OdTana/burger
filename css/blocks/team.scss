@@ -12,9 +12,18 @@
   position: absolute;
   background:  
   url(../img/icon/team_sec/blueberries.png) no-repeat;
+  background-size: contain;
   transform: translateY(-50%);
   top: 0;
   right: 0;
+  @include tablets {
+    width: rem(100px);
+    height: rem(100px);
+  }
+  @include phones {
+    width: rem(100px);
+    height: rem(100px);
+  }
 
 }
 
@@ -39,7 +48,7 @@
   align-items: center;
   padding-right: rem(20px);
   padding-bottom: rem(20px);
-  justify-content: space-between;
+ 
 
   @include tablets {
     flex-basis: 50%;

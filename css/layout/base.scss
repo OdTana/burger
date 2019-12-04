@@ -46,8 +46,10 @@ a {
   min-height: rem(650px);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
+  align-items: center;
+  justify-content: center;
   
   @include tablets {
     min-height: initial; //height: 100vh;//

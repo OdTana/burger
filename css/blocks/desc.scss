@@ -51,7 +51,7 @@
 }
 
 .desc__list--left .desc__item{
-    width: calc(100%/3 - rem(17px));
+    width: calc(100%/3 - 17px);
 }
 
 .desc__list--left .desc__icon{
@@ -132,7 +132,55 @@
       
     }
 }
+.desc__list--vertical{
+    align-items: flex-start;
+}
 
+.desc__list--vertical .desc__item{
+    // width: calc(100%/3 - 17px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: rem(25px);
+    padding: 0 3%;
+    margin-right: 0;
+    
+
+    @include tablets {
+      height: 100%;
+      margin-right: 0;
+        
+    }
+    
+    @include phones {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.desc__list--vertical .desc__item:after{
+    content: "";
+    position: absolute;
+    background: url(../img/icon/why_sect/between.png) no-repeat center center;
+    width: 100%;
+    height: rem(20px) ;
+    display: block;
+    justify-content: center;
+    transform: translateX(50%);
+    top: rem(50px) ;
+
+    @include tablets {
+        display: none;
+        margin-bottom: rem(25px);
+        
+    }
+}
+
+.desc__list--vertical .desc__item:last-child::after{
+    display: none;
+}  
 .desc__comment{
     display: flex;
     flex-direction: column;
@@ -200,55 +248,7 @@
 
  }
 
-.desc__list--vertical{
-    align-items: flex-start;
-}
 
-.desc__list--vertical .desc__item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: calc(100%/3 - rem(17px));
-    position: relative;
-    margin-bottom: rem(25px);
-    padding: 0 3%;
-    margin-right: 0;
-    
-
-    @include tablets {
-      height: 100%;
-      margin-right: 0;
-        
-    }
-    
-    @include phones {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-.desc__list--vertical .desc__item:after{
-    content: "";
-    position: absolute;
-    background: url(../img/icon/why_sect/between.png) no-repeat center center;
-    width: 100%;
-    height: rem(20px) ;
-    display: block;
-    justify-content: center;
-    transform: translateX(50%);
-    top: rem(50px) ;
-
-    @include tablets {
-        display: none;
-        margin-bottom: rem(25px);
-        
-    }
-}
-
-.desc__list--vertical .desc__item:last-child::after{
-    display: none;
-}
 
 .desc__title{
     font-size: rem(27px) ;

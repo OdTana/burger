@@ -12,8 +12,10 @@
   position: absolute;
   background:  
   url(../img/icon/comment_sec/sev_berries.png) no-repeat;
-  transform: translateY(50%);
+  background-size: contain;
+  transform: translate(-25%, 50%);
   bottom: 0;
-
+  left: 0;
+  z-index: 1;
 }
  
