@@ -21,7 +21,11 @@
         border: 1px solid transparent;
         outline: unset;
         cursor: pointer;
-
+        
+    
+        @include phones {
+                padding: rem(20px) rem(30px);
+        }
        
 }
 

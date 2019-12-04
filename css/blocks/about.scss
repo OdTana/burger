@@ -9,6 +9,11 @@
         margin-bottom: rem(30px);
         margin-top: rem(60px);
     }
+
+    @include phones {
+        margin-bottom: rem(20px);
+        margin-top: rem(40px);
+    }
 }
 
 .content__container .about{
@@ -25,7 +30,15 @@
     text-align: center;
 
     @include phones {
+        margin-bottom: rem(10px);
         font-size: rem(40px);
+    }
+
+}
+
+.form .about__title{
+    @include phones {
+        font-size: rem(35px);
     }
 
 }

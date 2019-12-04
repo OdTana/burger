@@ -1,8 +1,26 @@
 
 .comments{
   position: relative;
-  background:url(../img/icon/comment_sec/strawberry.png) right 5% no-repeat;
+  
 }
+
+.comments::before{
+  content: '';
+  position: absolute;
+  background:url(../img/icon/comment_sec/strawberry.png) right 5% no-repeat;
+  background-size: contain;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: rem(150px) ;
+  height: rem(100px) ;
+  @include tablets {
+    width: rem(110px) ;
+    height: rem(85px) ;
+    
+  }
+}
+
 
 .comments:after{
   content: '';
@@ -17,5 +35,10 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+  @include tablets {
+    width: rem(105px) ;
+    height: rem(150px) ;
+    
+  }
 }
  

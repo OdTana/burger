@@ -6,7 +6,9 @@
     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
 
     @include phones {
-        font-size: rem(48px) ;
+        font-size: rem(46px) ;
+        line-height: 0.95;
+        margin-bottom: rem(15px) ;
     }
 }
 
@@ -19,9 +21,9 @@
     }
 
     @include phones {
-        padding: 0 10%;
-        font-size: rem(18px);
-        margin-bottom: rem(25px);
+        padding: 0 5%;
+        font-size: rem(17px);
+        margin-bottom: rem(15px);
         }
 }
 

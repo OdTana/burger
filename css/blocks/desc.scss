@@ -10,6 +10,7 @@
 
     @include phones {
         justify-content: center;
+        margin-bottom: rem(30px) ;
     }
 }
 
@@ -46,12 +47,14 @@
     }
     @include phones {
         justify-content: space-between;
+        width: 100%;
         
     }
 }
 
 .desc__list--left .desc__item{
-    width: calc(100%/3 - 17px);
+    width: calc(100%/3);
+
 }
 
 .desc__list--left .desc__icon{
@@ -68,7 +71,10 @@
     position: relative;
     align-items: center;
     margin-right: rem(17px);
-
+    @include phones {
+        margin-right: rem(5px);
+        
+        }
 }
 
 .desc__item:last-child{
@@ -91,6 +97,11 @@
         margin-bottom: rem(30px);
         
     }
+    @include phones {
+        margin-bottom: rem(20px);
+        width: rem(125px) ;
+        height: rem(125px) ;
+    }
     
 }
 .desc--comment{
@@ -101,9 +112,21 @@
     padding: rem(50px)  rem(50px)  rem(37px)  rem(50px) ;
 
 
+    @include tablets {
+        background-position: right center; 
+       
+    }
+
+    @include phones {
+        background-position: right center; 
+        padding: rem(40px)  rem(20px)  rem(15px)  rem(20px) ;
+    }
 
 }
 
+.desc--comment .desc__text{
+    margin-bottom: rem(30px);
+}
 
 .desc--comment .desc__icon{
     display: block;
@@ -157,6 +180,7 @@
     @include phones {
         flex-direction: row;
         justify-content: space-between;
+        padding: 0;
     }
 }
 
@@ -234,6 +258,7 @@
      background-color: $white-grey;
      border-radius: 50%;
      margin-bottom: rem(35px) ;
+     flex-shrink: 0;
 
      @include tablets {
         margin-bottom: rem(25px) ;
@@ -241,7 +266,7 @@
     } 
     @include phones {
         margin-bottom: 0 ;
-       
+        margin-right: rem(10px);
         
     } 
 
@@ -256,9 +281,11 @@
     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
     @include tablets {
         margin-bottom: rem(20px)
-        
     }
-
+    @include phones {
+        margin-bottom: rem(10px);
+        
+    } 
 }
 
 .desc__text{

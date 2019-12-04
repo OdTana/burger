@@ -51,7 +51,6 @@
 .form__element{
     width: 100%;
     display: flex;
-    margin-top: rem(30px);
 
     @include tablets {
         flex-direction: column;
@@ -82,10 +81,18 @@
     justify-content: center;
     
     }
+    @include phones {
+        justify-content: center;
+        margin-bottom: rem(8px);
+        
+    }
 }
 
 .form__row-last{
     margin-top: rem(25px);
+    @include phones {
+        margin-top: rem(15px);
+    }
 } 
 
 .form__block{
@@ -100,6 +107,10 @@
 
 .form__block__title{
     margin-bottom: rem(7px);
+    @include phones {
+        font-size: rem(16px);;
+        margin-bottom: 0;
+    }
 }
 
 
@@ -112,11 +123,19 @@
     font-size: rem(18px);
     color: $black;
     outline: none;
+    @include phones {
+        padding: rem(15px) rem(10px);
+        
+    }
 }
 
 .form__input--textarea{
     height: rem(180px);
     resize: none; //вширину нельзя было раздвинуть//
+    @include phones {
+        height: rem(100px);
+        
+    }
 }
 .form__input:focus{
     border: 1px solid #dde3bd;
@@ -165,7 +184,12 @@
     height: rem(15px);
     width: rem(15px);
 }
-
+.option__title{
+    @include phones {
+        font-size: rem(16px);;
+       
+    }
+}
 .option__checkbox{
     display: none;
 }

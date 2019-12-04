@@ -4,7 +4,14 @@
     justify-content: space-between;
     align-items: center;
     padding-top: rem(22px) ;
-  
+    @include tablets {
+      justify-content: flex-start;
+    }
+  @include phones {
+    justify-content: flex-start;
+    padding-top: rem(18px) ;
+    }
+
    
   }
 
