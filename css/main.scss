@@ -1,6 +1,8 @@
 @import '../css/layout/variables.scss';
-@import '../css/layout/fonts.scss';
+
 @import '../css/layout/normalize.scss';
+@import '../css/layout/fonts.scss';
+@import '../css/layout/media.scss';
 @import '../css/layout/base.scss';
 
 @import '../css/blocks/page.scss';
@@ -12,7 +14,11 @@
 @import '../css/blocks/desc.scss';
 @import '../css/blocks/pages.scss';
 @import '../css/blocks/why.scss';
+@import '../css/blocks/team.scss';
+@import '../css/blocks/menu.scss';
 @import '../css/blocks/comments.scss';
 @import '../css/blocks/review.scss';
-@import '../css/blocks/team.scss';
-
+@import '../css/blocks/contacts.scss';
+@import '../css/blocks/socials.scss';
+@import '../css/blocks/order.scss';
+@import '../css/blocks/gamburger.scss';

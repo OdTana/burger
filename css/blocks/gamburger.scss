@@ -1,0 +1,35 @@
+.gamburger__menu{
+    display: none;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 5%;
+    right: 5%;
+    height: rem(25px);
+    align-items: center;
+
+
+    @include tablets {
+        z-index: 3;
+      }
+      
+      @include phones {
+        z-index: 3;
+      }
+
+}
+
+
+
+.gamburger__menu-link{
+    width: rem(25px);
+    height: rem(6px);
+    background-color: $white;
+    display: block;
+    border-radius: rem(3px);
+    cursor: pointer;
+   
+
+}
+

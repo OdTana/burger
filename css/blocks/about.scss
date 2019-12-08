@@ -3,25 +3,52 @@
     flex-direction: column;
     align-content: center;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
+    margin-top: rem(70px);
+    @include tablets {
+        margin-bottom: rem(30px);
+        margin-top: rem(60px);
+    }
 
+    @include phones {
+        margin-bottom: rem(20px);
+        margin-top: rem(40px);
+    }
 }
 
 .content__container .about{
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
 }
 
 
 
 .about__title{
-    font-size: 48px;
+    font-size: rem(48px);
     text-transform: uppercase;
     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
+    text-align: center;
+
+    @include phones {
+        margin-bottom: rem(10px);
+        font-size: rem(40px);
+    }
+
+}
+
+.form .about__title{
+    @include phones {
+        font-size: rem(35px);
+    }
+
 }
 
 .about__text{
     color: $grey;
-    padding: 0px 230px;
+    padding: 0 10%;
+
+    @include phones {
+        padding: 0;
+    }
 }
 

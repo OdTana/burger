@@ -1,72 +1,116 @@
 
 .team{
   position: relative;
-  background:url(../../img/icon/team_sec/pattern_team.png) right top no-repeat;
+  background:url(../img/icon/team_sec/pattern_team.png) right top no-repeat;
 }
 
 .team:after{
   content: '';
   overflow: hidden;
-  width: 145px;
-  height: 115px;
+  width: rem(145px);
+  height: rem(125px);
   position: absolute;
   background:  
-  url(../../img/icon/team_sec/blueberries.png) no-repeat;
-  bottom: 85%;
-  left: 85%;
+  url(../img/icon/team_sec/blueberries.png) no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+  top: 0;
+  right: 0;
+  @include tablets {
+    width: rem(100px);
+    height: rem(100px);
+  }
+  @include phones {
+    width: rem(100px);
+    height: rem(100px);
+  }
 
 }
 
 .team__list{
   display: flex;
   flex-wrap: wrap;
-  // height: 100%;
+  justify-content: space-between;
+  align-items: center;
 
-
+  @include tablets {
+    margin-right: rem(-20px);
+    height: 100%;
+  }
+  
 }
  
 .team__item{
   flex-basis: 25%;
-  height: 100%;
+  // height: 100%;
   flex-direction: column;
   display: flex;
   align-items: center;
+  padding-right: rem(20px);
+  padding-bottom: rem(20px);
+ 
+
+  @include tablets {
+    flex-basis: 50%;
+    height: 50%;
+
+  }
 }
 
+// .team__item:nth-child(even) {
+//   @include tablets {
+//     padding-right: 0;
+
+//   }
+//   @include phones {
+//     padding-right: 0;
+
+//   }
+// }
 
 .team__pic{
-  margin-bottom: 30px;
+  max-width: rem(220px);
+  margin-bottom: rem(30px);
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
+  @include phones {
+    margin-bottom: rem(15px);
+    
+  }
 }
 
 .team__name{
   font-family: 'Alegreya Sans Medium', Arial, sans-serif;;
-  font-size: 21px;
+  font-size: rem(21px);
   color: $dark-grey;
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
   display: inline-block;
   cursor: pointer;
+  text-align: center;
+  @include phones {
+    font-size: rem(20px);
+    
+  }
 
 }
 
 .team__name:after{
   content: "";
-  background: url(../../img/icon/team_sec/polygon.png) no-repeat center center;
-  width: 10px;
-  height: 10px;
+  background: url(../img/icon/team_sec/polygon.svg) no-repeat center center;
+  width: rem(10px);
+  height: rem(10px);
   display: inline-block;
-  padding-left: 5px;
+  padding-left: rem(5px);
 }
 
 .team__item--active .team__name{
-  color: yellow;
+  color: $green;
 
 }
 
 .team__item--active .team__name:after{
-  background: url(../../img/icon/team_sec/polygon_active.png) no-repeat center center;
+  background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
 }
 
 .team__comment{
@@ -76,6 +120,7 @@
   // height: 0;
 //  overflow: hidden;
  opacity: 0;
+
 }
 
 .team__item--active .team__comment{
@@ -87,26 +132,32 @@
 
 .team__text{
   font-family: 'Alegreya Sans Light', Arial, sans-serif;
-  font-size: 18px;
+  font-size: rem(18px);
   color: $grey;
   text-align: center;
 
 }
 
+
+.team__item:active .team__name{
+  color: $green;
+} 
+
+
+.team__item:active .team__name:after{
+  background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
+}
+
+
+.team__item:active .team__comment{
+  overflow: visible;
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+
 // .team__item:nth-child(even){
-//     margin-top: 20px;
-// }
-
-// .team__item:active .team__name{
-//   color: yellow;
-// } 
-// .team__item:active .team__name:after{
-//   background: url(../../img/icon/team_sec/polygon_active.png) no-repeat center center;
-// }
-
-
-// .team__item:active .team__comment{
-//   overflow: visible;
-//   height: 100%;
-//   opacity: 1;
+//   margin-top: rem(20px);
 // }

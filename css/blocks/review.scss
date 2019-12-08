@@ -4,18 +4,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: rem(20px);
 }
 
 .review__item{
-    width: 70px;
-    height: 70px;
+    width: rem(70px);
+    height: rem(70px);
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 12px;
+    margin-right: rem(12px);
 }   
 
 .review__item--active{
-    border: 5px solid #0f5a47;
+    border: rem(5px) solid #0f5a47;
 
 }
 
