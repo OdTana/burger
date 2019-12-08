@@ -1,0 +1,253 @@
+.bar{
+    background-color: #f8faf9;
+}
+
+.bar__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.bar__info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: rem(30px);
+    @include tablets{
+        text-align: left;
+    }
+    @include phones{
+        margin-bottom: rem(20px);
+    }
+}
+
+.bar__content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: rem(15px);
+    margin-right: rem(15px);
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+    }  
+    @include tablets{
+        margin-left: 0;
+        margin-right: 0;
+    }  
+}
+.bar__content-left{
+    width: rem(400px);
+    height: rem(400px);
+    @include tablets{
+         position: relative;
+        width: rem(300px);
+        height: rem(300px);
+        margin-bottom: rem(30px);
+
+    }
+    @include phones{
+        position: relative;
+        width: rem(240px);
+        height: rem(240px);
+        margin-bottom: rem(20px);
+    }
+}
+
+.bar__content-left::before{
+    content: '';
+    overflow: hidden;
+    width: rem(70px);
+    height: rem(80px);
+    position: absolute;
+    background:  
+    url(../img/icon/bar_sec/leaf1.png) no-repeat;
+    background-size: contain;
+    // transform: translateY(50%);
+    top: 20%;
+    left: -10%;
+    z-index: 2;
+    @include phones{
+        width: rem(50px);
+        height: rem(70px);
+    }
+
+}
+
+.bar__content-left::after{
+    content: '';
+    overflow: hidden;
+    width: rem(100px);
+    height: rem(90px);
+    position: absolute;
+    background:  
+    url(../img/icon/bar_sec/leaf2.png) no-repeat;
+    background-size: contain;
+    // transform: translateY(50%);
+    right: 0;
+    bottom: -10%;
+    z-index: 2;
+    @include phones{
+        width: rem(70px);
+        height: rem(60px);
+        right: -10%;
+
+    }
+
+}
+
+.bar__content-right{
+    padding: 0 rem(25px);
+    flex: 1;
+    margin-right: 0 auto;
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex: none;
+    }
+    @include phones{
+        padding: 0 ;
+    }
+}
+
+.bar__text{
+    font-size: rem(18px) ;
+    color: $grey; 
+    margin-bottom: rem(45px);
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets{
+        text-align: center;
+    }
+    @include phones{
+        margin-bottom: rem(30px);
+    }
+    
+}
+
+.bar__text-det{
+    width: rem(110px);
+}
+.arrow__prev, .arrow__next{
+  position: absolute;
+}
+.arrow__prev{
+    top: 50%;
+    left: -6%;
+    @include tablets{
+        left: -20%;
+    }
+    @include phones{
+        left: -25%;
+    }
+
+}
+.arrow__prev-icon{
+    width: rem(20px);
+    height: rem(20px);
+    transform: rotate(90deg);
+    @include tablets{
+       
+        width: rem(35px);
+        height: rem(35px);
+        
+    }
+    @include phones{
+       
+        width: rem(30px);
+        height: rem(30px);
+       
+    }
+}
+.arrow__next{
+    top: 50%;
+    right: -6%;
+    @include tablets{
+        right: -20%;
+    }
+    @include phones{
+        right: -25%;
+
+    }
+}
+
+.arrow__next-icon{
+    width: rem(20px);
+    height: rem(20px);
+    transform: rotate(-90deg);
+    @include tablets{
+        
+        width: rem(35px);
+        height: rem(35px);
+        
+    }
+    @include phones{
+       
+        width: rem(30px);
+        height: rem(30px);
+        
+    }
+    
+}
+
+.bar__title{
+    font-size: rem(36px);
+    margin-bottom: rem(25px);
+    @include tablets{
+        font-size: rem(30px); 
+        padding: 0 10%;
+    }
+    @include phones{
+        padding: 0;
+        line-height: 1;
+    }
+}
+
+
+
+
+.bar__det{
+    color: $dark-grey; 
+    margin-right: rem(55px);
+}
+.bar__det:last-child{
+    margin-right: 0;
+}
+
+.bar__num{
+    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+}
+
+.bar__order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+.bar__price{
+    margin-right: rem(30px);
+    font-family: 'Alegreya Sans Light', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.bar__price-num{
+    font-size: rem(60px);
+    margin-right: 5px;
+}
+.bar__price-rub{
+    font-size: rem(40px);
+    line-height: 5px;
+	width: 0.4em;
+	border-bottom: 1px solid #000; 
+	display: inline-block;
+}

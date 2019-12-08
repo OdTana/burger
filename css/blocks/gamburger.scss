@@ -1,5 +1,7 @@
+
 .gamburger__menu{
-    display: none;
+    @include tablets {
+   
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -8,11 +10,9 @@
     right: 5%;
     height: rem(25px);
     align-items: center;
-
-
-    @include tablets {
-        z-index: 3;
-      }
+    cursor: pointer;
+    z-index: 3;
+    }
       
       @include phones {
         z-index: 3;
@@ -22,14 +22,42 @@
 
 
 
-.gamburger__menu-link{
+.gamburger__menu-point{
     width: rem(25px);
     height: rem(6px);
     background-color: $white;
     display: block;
-    border-radius: rem(3px);
-    cursor: pointer;
-   
+    border-radius: rem(3px);  
 
 }
 
+.gamburger__menu-page{
+  // position: fixed;
+  top: 0;
+  left: 0;
+  // display: none;
+  height: 10vh;
+  width: 100%;
+  background-color: $dark-grey;
+  opacity: 0.98;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(46px);
+  color: $white;
+  text-align: center;
+  z-index: 3;
+}
+
+
+.nav__gamburger
+.nav__item_gamburger{
+  margin-bottom: rem(40px) ;
+
+}
+
+.nav__item_gamburger:last-child{
+  margin-bottom: 0 ;
+
+}

@@ -3,7 +3,11 @@
     top: 25%;
     right: 5%;
     z-index: 2;
+
+    @include tablets {
+      display: none;
     
+      }
 }
 
 .pages__elips{

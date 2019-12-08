@@ -43,9 +43,10 @@
 
     @include phones {
       width: 100%;
-    max-width: rem(300px);
+    // max-width: rem(300px);
     height: rem(280px);
     margin-bottom: rem(20px);
+    flex-shrink: 0;
     }
 
 }
@@ -61,7 +62,7 @@
     background-repeat: no-repeat; 
     background-position: center center; 
     background-size: cover;
-    z-index: 1;
+    // z-index: 1;
 
 
     @include tablets {

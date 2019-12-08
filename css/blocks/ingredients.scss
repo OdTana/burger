@@ -1,0 +1,89 @@
+.ingredients {
+    position: relative; 
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: rem(37px);
+    @include tablets{
+    position: absolute;
+    top: 2%;
+    right: -8%;
+    }
+    @include phones{
+        position: absolute;
+        top: 1%;
+        right: 0;
+    
+    }
+   
+}
+
+
+.ingredients__box{
+    position: relative; 
+    width: rem(90px);
+    height: rem(90px);
+    background-color: $blue;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    padding: rem(10px) rem(20px);
+    text-transform: uppercase;
+    font-size: rem(14px);
+    font-family: 'Alegreya Sans BlackItalic', Arial, sans-serif;
+
+    @include phones{
+        width: rem(70px);
+        height: rem(70px);
+    }
+}
+.ingredients__item{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    justify-content: space-between;
+    margin-bottom: rem(10px);
+}
+.ingredients__icon{
+    width: rem(50px);
+    height: rem(50px);
+    fill: $white;
+
+}
+
+.ingredients__text{
+    text-align: start;
+}
+.ingredients__weigh{
+    text-align: right;
+}
+.ingredients__content{
+    padding: rem(20px) rem(20px);
+    border-radius: 3%;
+    position: absolute;
+    background-color: $white;
+    width: rem(270px);
+    font-size: rem(16px);
+
+    left: rem(99999px);
+    z-index: 2;
+    transition: opacity 0.7s;
+    opacity: 0;
+    top: 0;
+
+    // display: none;
+}
+
+.ingredients:hover .ingredients__content{
+    opacity: 1;
+    left: initial;
+    left: 100%;
+}
+
+.ingredients__img{
+    width: rem(40px);
+    height: rem(40px);
+    fill: $black;
+}
