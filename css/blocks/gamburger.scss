@@ -11,11 +11,11 @@
     height: rem(25px);
     align-items: center;
     cursor: pointer;
-    z-index: 3;
+    z-index: 100;
     }
       
       @include phones {
-        z-index: 3;
+        z-index: 100;
       }
 
 }
@@ -32,14 +32,33 @@
 }
 
 .gamburger__menu-page{
-  // position: fixed;
+  position: fixed;
+  background-color: $dark-grey;
   top: 0;
   left: 0;
-  // display: none;
-  height: 10vh;
   width: 100%;
-  background-color: $dark-grey;
-  opacity: 0.98;
+  
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+ 
+}
+
+
+.nav__gamburger{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+}
+
+.nav__list_gamburger{
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,17 +66,27 @@
   font-size: rem(46px);
   color: $white;
   text-align: center;
-  z-index: 3;
+  @include phones{
+    font-size: rem(30px);
+    
+  }
 }
-
-
-.nav__gamburger
 .nav__item_gamburger{
   margin-bottom: rem(40px) ;
+  padding: 0;
 
 }
 
 .nav__item_gamburger:last-child{
   margin-bottom: 0 ;
+  
 
 }
+
+.gamburger__menu-page.overlay--open{
+    opacity: 0.99;
+    visibility: visible;
+    height: 100%;
+}
+
+

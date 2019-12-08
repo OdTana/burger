@@ -10,13 +10,15 @@
 .content--left{
     display: flex;
     flex-direction: column;
-    width: rem(470px);
-    align-items: flex-start;
-
+    // width: rem(470px);
+    align-items: center;
+    flex: 1;
+    margin: 0 auto;
     @include tablets {
       align-items: center;
       width: 100%;
       margin-bottom: rem(40px);
+      justify-content: center;
 
     }
 
@@ -24,16 +26,17 @@
       align-items: center;
       width: 100%;
       margin-bottom: rem(30px);
+      justify-content: center;
     }
 }
 
 .content--right{
-    max-width: rem(490px);
-    max-height: rem(510px);
+    width: rem(490px);
+    height: rem(490px);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    text-align: center;
 
     @include tablets {
     width: 100%;
@@ -44,7 +47,7 @@
     @include phones {
       width: 100%;
     // max-width: rem(300px);
-    height: rem(280px);
+    height: rem(230px);
     margin-bottom: rem(20px);
     flex-shrink: 0;
     }
@@ -142,23 +145,26 @@
   }
 
 
-.page__container--left{
+.page__content{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
     // margin: 0 auto;
 
     @include tablets {
+      justify-content: center;
       flex-direction: column-reverse;
       align-items: center;
-      width: 100%;
+      // width: 100%;
     
     }
 
     @include phones {
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 100%;
+      justify-content: center;
+      flex-direction: column-reverse;
+      align-items: center;
+    // width: 100%;
     }
 }
   
@@ -185,19 +191,3 @@
   }
 
 
-.page__container .content{
-    flex-direction: row;  
-    align-items: center;
-    justify-content: center;
-
-    @include tablets {
-      flex-direction: column-reverse;
-
-    }
-
-    @include phones {
-      flex-direction: column-reverse;
-    }
-
-
-}

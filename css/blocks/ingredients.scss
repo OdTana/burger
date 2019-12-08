@@ -5,12 +5,12 @@
     margin-bottom: rem(37px);
     @include tablets{
     position: absolute;
-    top: 2%;
-    right: -8%;
+    top: -15%;
+    right: 0;
     }
     @include phones{
         position: absolute;
-        top: 1%;
+        top: -6%;
         right: 0;
     
     }
@@ -37,6 +37,7 @@
     @include phones{
         width: rem(70px);
         height: rem(70px);
+        font-size: rem(13px);
     }
 }
 .ingredients__item{
@@ -80,6 +81,10 @@
     opacity: 1;
     left: initial;
     left: 100%;
+    @include tablets{
+        right: 100%;
+        left: initial;
+    }
 }
 
 .ingredients__img{
@@ -87,3 +92,4 @@
     height: rem(40px);
     fill: $black;
 }
+
