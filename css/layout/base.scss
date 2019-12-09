@@ -40,6 +40,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+body.body-menu--locked{
+  overflow: hidden;
+}
 
 .section{
   height: 100vh;

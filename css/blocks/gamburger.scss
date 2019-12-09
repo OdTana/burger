@@ -42,6 +42,7 @@
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,9 +85,8 @@
 }
 
 .gamburger__menu-page.overlay--open{
-    opacity: 0.99;
-    visibility: visible;
-    height: 100%;
+  opacity: 0.99;
+  visibility: visible;
+  height: 100%;
 }
-
 

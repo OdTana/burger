@@ -1,5 +1,5 @@
 .order{
-    background-image: url(../../img/icon/order_sec/pattern_order.png);
+    background-image: url(../img/icon/order_sec/pattern_order.png);
     background-repeat: no-repeat; 
     background-position: center center; 
     background-size: cover;
@@ -225,7 +225,7 @@
 .option__checkbox:checked + .option__checkbox-fake::after{
     width: rem(25px);
     height: rem(25px);
-    background: url(..//img/icon/order_sec/check.png) center center no-repeat;
+    background: url(../img/icon/order_sec/check.png) center center no-repeat;
    
 }
 
