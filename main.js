@@ -13,8 +13,8 @@
 
 
 let menuOpenBurger = (function (buttonClass, menuClass){
-    let button = document.querySelector("#button");
-    let menu = document.querySelector("#overlay");
+    let button = document.querySelector(buttonClass);
+    let menu = document.querySelector(menuClass);
     // let body = document.querySelector("body");
     let toggleMenu = function (e){
         button.classList.toggle('button__gamburger--active');
@@ -28,7 +28,7 @@ let menuOpenBurger = (function (buttonClass, menuClass){
         openMenu: addListeners
     };    
 })("#button", "#overlay" );
-// console.log(menuOpenBurger)
+// console.log(menuOpenBurger);
 menuOpenBurger.openMenu();
 
 
