@@ -5,12 +5,12 @@
     margin-bottom: rem(37px);
     @include tablets{
     position: absolute;
-    top: -15%;
+    top: -6%;
     right: 0;
     }
     @include phones{
         position: absolute;
-        top: -6%;
+        top: -5%;
         right: 0;
     
     }
@@ -39,6 +39,10 @@
         height: rem(70px);
         font-size: rem(13px);
     }
+}
+
+.ingredients__box:hover{
+    background-color: $dark-blue;
 }
 .ingredients__item{
     display: flex;
