@@ -11,7 +11,7 @@
 
 
 
-
+//ОТКРЫТИЕ МЕНЮ
 let menuOpenBurger = (function (buttonClass, menuClass){
     let button = document.querySelector(buttonClass);
     let menu = document.querySelector(menuClass);
@@ -194,7 +194,7 @@ function loop(direction, e){
     const review = document.querySelectorAll('.review__item');
     let active = 0;
 
-    for (let i = 0; i > comment.length; i++){
+    for (let i = 0; i < comment.length; i++){
         review[i].addEventListener('click', function (e) {
             e.preventDefault();
             comment[i].classList.toggle("comment__item--active");
@@ -346,7 +346,7 @@ myform.addEventListener("submit", submitForm);//вешаем обработчи�
 //       if (!validateField(myform.elements.comment)){
 //         valid = false;
 //       }
-//       return valid
+//       return valid;
 //   }
 
 //   function validateField(field){
