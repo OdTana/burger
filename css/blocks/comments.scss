@@ -4,6 +4,9 @@
   
 }
 
+.comments__content{
+  overflow: hidden;
+}
 .comments::before{
   content: '';
   position: absolute;
@@ -42,6 +45,7 @@
   }
 }
 .comment{
+  width: 100%;
   background-image: url(../img/icon/comment_sec/pattern_comment.png);
   background-repeat: no-repeat; 
   background-position: right top; 
@@ -72,14 +76,7 @@
   width: 100%;
   height: 100%;
 }
-.comment__item{
-  @include tablets {
-      flex-direction: column;
-      margin-right: 0;
-  }
-  
 
-}
 
 .comment__text{
   @include tablets {
@@ -136,16 +133,26 @@
 }
 
 .comment__item{
+  width: 100%;
+  flex-shrink: 0;
   display: flex;
   font-size: rem(16px) ;
   position: relative;
   align-items: center;
   margin-right: rem(17px);
-  @include phones {
-      margin-right: rem(5px);
-      
-      }
+  @include tablets {
+    flex-direction: column;
+    margin-right: 0;
+  }
+  
 }
+
+
+.comment__item--active{
+  width: 100%;
+  overflow: hidden;
+}
+
 
 .comment__desc{
   display: flex;

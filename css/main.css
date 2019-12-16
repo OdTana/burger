@@ -1727,6 +1727,9 @@ img {
 .comments {
   position: relative; }
 
+.comments__content {
+  overflow: hidden; }
+
 .comments::before {
   content: '';
   position: absolute;
@@ -1762,6 +1765,7 @@ img {
       height: 9.375rem; } }
 
 .comment {
+  width: 100%;
   background-image: url(../img/icon/comment_sec/pattern_comment.png);
   background-repeat: no-repeat;
   background-position: right top;
@@ -1785,14 +1789,6 @@ img {
   margin: 0 auto;
   width: 100%;
   height: 100%; }
-
-@media screen and (max-width: 768px) {
-  .comment__item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-right: 0; } }
 
 @media screen and (max-width: 768px) {
   .comment__text {
@@ -1838,6 +1834,9 @@ img {
   font-size: 1.125rem; }
 
 .comment__item {
+  width: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1847,9 +1846,17 @@ img {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 1.0625rem; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     .comment__item {
-      margin-right: 0.3125rem; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-right: 0; } }
+
+.comment__item--active {
+  width: 100%;
+  overflow: hidden; }
 
 .comment__desc {
   display: -webkit-box;
