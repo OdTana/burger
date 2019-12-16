@@ -202,7 +202,7 @@ function loop(direction, e){
 
             review[active].classList.toggle("review__item--active");
             comment[active].classList.toggle("comment__item--active");
-            active = 1;
+            active = i;
         })
     }
 }());
