@@ -205,30 +205,26 @@ function loop(direction, e){
             active = i;
         })
     }
-}());
+})();
 
 //AJAX
-
-const overlay = function () {
+const overlay = (function () {
     let body  = document.querySelector("body");
-    let link = document.createElement("a");//созд ссылку
-
-    link.classList.add("modal-review__close");
-    link.setAttribute("href", "#");
+    let link = document.querySelector(".order-button");
 
     let openOverlay = function (modalId, content) {//передается id модального окна
         let overlay =   document.querySelector(modalId);      
         let innerOverlay = overlay.querySelector(".modal-review__inner");
 
-        if(content){//если передали необязат параметр, то вставить содержимое в блок и после добавить ссылку закрытия
+        if(content){//если передали необязат параметр, то вставить содержимое в блок 
             innerOverlay.innerHTML = content;
-            innerOverlay.appendChild(link);// добавляем ссылку закрытия после всего содержимого модалки
+            
         }
 
         overlay.classList.add("is-active");//добавляем класс и показываем модалку
-        body.classList.add("locked");
+        body.classList.add("body-menu--locked");
 
-        link.addEventListener("click", (e) => {//обработка клика на созд крестик
+        link.addEventListener("click", (e) => {//обработка клика 
             e.preventDefault();
             closeOverlay(modalId);//закрываем
         })
@@ -246,44 +242,95 @@ const overlay = function () {
     }
 
     let closeOverlay = function (modalId) {//функция закрытия удаляет классы у выбранного модального окна
-        let overlay =   document.querySelector(modalId);  
+        let overlay = document.querySelector(modalId);  
         
         overlay.classList.remove("is-active");//удаляем класс и показываем модалку
-        body.classList.remove("locked");
+        body.classList.remove("body-menu--locked");
     }
 
-    let setContent = function (modalId, content){
-        let overlay =   document.querySelector(modalId); 
-        let innerOverlay = overlay.querySelector(".modal-review__inner");
-
-        if(content){//если передан необязательный параметр то вставить содержимое в блок и после добавить ссылку закрытия
-            innerOverlay.innerHTML = content;
-            innerOverlay.appendChild(link);
-        }
-    }
-    
-    return{
+    return {
          open: openOverlay,
          close: closeOverlay,
-         setContent: setContent
+         
     }    
-}
-// })()
+})();
+
+//AJAX - созд ссылки Х
+// const overlay = (function () {
+//     let body  = document.querySelector("body");
+//     let link = document.createElement("a");//созд ссылку
+
+//     link.classList.add("modal-review__close");
+//     link.setAttribute("href", "#");
+
+//     let openOverlay = function (modalId, content) {//передается id модального окна
+//         let overlay =   document.querySelector(modalId);      
+//         let innerOverlay = overlay.querySelector(".modal-review__inner");
+
+//         if(content){//если передали необязат параметр, то вставить содержимое в блок и после добавить ссылку закрытия
+//             innerOverlay.innerHTML = content;
+//             innerOverlay.appendChild(link);// добавляем ссылку закрытия после всего содержимого модалки
+//         }
+
+//         overlay.classList.add("is-active");//добавляем класс и показываем модалку
+//         body.classList.add("locked");
+
+//         link.addEventListener("click", (e) => {//обработка клика на созд крестик
+//             e.preventDefault();
+//             closeOverlay(modalId);//закрываем
+//         })
+
+//         overlay.addEventListener("click", (e) => {//обработка клика вне модалки
+//             e.preventDefault();
+//             if(e.target === overlay){
+//                 closeOverlay(modalId);//закрываем
+//             }
+//         })
+
+//         document.addEventListener("keydown", function (e) {
+//             if (e.keyCode == 27) closeOverlay(modalId);// закрывает при нажатии на esc
+//         });
+//     }
+
+//     let closeOverlay = function (modalId) {//функция закрытия удаляет классы у выбранного модального окна
+//         let overlay =   document.querySelector(modalId);  
+        
+//         overlay.classList.remove("is-active");//удаляем класс и показываем модалку
+//         body.classList.remove("locked");
+//     }
+
+//     let setContent = function (modalId, content){
+//         let overlay =   document.querySelector(modalId); 
+//         let innerOverlay = overlay.querySelector(".modal-review__inner");
+
+//         if(content){//если передан необязательный параметр то вставить содержимое в блок и после добавить ссылку закрытия
+//             innerOverlay.innerHTML = content;
+//             innerOverlay.appendChild(link);
+//         }
+//     }
+    
+//     return {
+//          open: openOverlay,
+//          close: closeOverlay,
+//          setContent: setContent
+//     }    
+// })();
+
 
 //ЗАПРОС НА СЕРВЕР
 var ajaxForm = function(form){
-    var data = {
-        name: form.elements.name.value,
-        phone: form.elements.phone.value,
-        comment: form.elements.comment.value,
-        to: "otana@narod.ru"
-    },
-    url = " https://webdev-api.loftschool.com/sendmail";
+    const data = new FormData();
+    data.append("name", form.elements.name.value);
+    data.append("phone", form.elements.phone.value);
+    data.append("comment", form.elements.comment.value);
+    data.append("to", "otana@narod.ru");
+
+    url = "https://webdev-api.loftschool.com/sendmail";
 
     const xhr = new XMLHttpRequest();
-    xhr.responseType = "json";
+    xhr.responseType = "json"; 
     xhr.open("POST", url);
-    xhr.send(JSON.stringify(data))
+    xhr.send(data);
 
     return xhr;
 }
@@ -292,11 +339,11 @@ var submitForm = function (e){//обрабатывается ответ с се�
     e.preventDefault();
     var form = e.target;
     let request = ajaxForm(form);//кладем ответ с сервера в перем request
-
+    // 
     request.addEventListener('load', () => {//после того как ответ получен, проверяем статус ответа и выводим модальное окно
+        
         if (request.status >= 400){
             let content = "Ошибка соединения с сервером, попробуйте позже";
-
             overlay.open("#modal-review", '${content}.Ошибка ${request.status}')
         }else if (request.response.status){//иначе приходит норм ответ и хранится в response
             let content = request.response.message;
@@ -312,44 +359,3 @@ let myform = document.querySelector("#main-form");
 myform.addEventListener("submit", submitForm);//вешаем обработчик событий на форму
 
 
-// let myform = document.querySelector("#main-form");
-// let send = document.querySelector("#send");
-//  send.addEventListener("click", event => {
-//      event.preventDefault();
-//      if (validateForm(myform)){
-//         const data = {
-//             name: myform.elements.name.value,
-//             phone: myform.elements.phone.value,
-//             comment: myform.elements.comment.value,
-//             to: "otana@narod.ru"
-
-//         }
-//         const xhr = new XMLHttpRequest();
-//         xhr.responseType = "json";
-//         xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
-//         xhr.send(JSON.stringify(data));
-//         xhr.addEventListener("load",() =>{
-//             if (xhr.response.status){
-//                 console.log("Все ОК!!!")
-//             }
-//         });
-//      }
-//  });
-//   function validateForm(myform) {
-//       let valid = true;
-//       if (!validateField(myform.elements.name)){
-//         valid = false;
-//       }
-//       if (!validateField(myform.elements.phone)){
-//         valid = false;
-//       }
-//       if (!validateField(myform.elements.comment)){
-//         valid = false;
-//       }
-//       return valid;
-//   }
-
-//   function validateField(field){
-//       field.nextElementSibling.textContent = field.validationMessage;
-//       return field.checkValidity;
-//   }

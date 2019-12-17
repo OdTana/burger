@@ -1769,18 +1769,15 @@ img {
   background-image: url(../img/icon/comment_sec/pattern_comment.png);
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: cover;
-  padding: 3.125rem 3.125rem 2.3125rem 3.125rem; }
+  background-size: cover; }
   @media screen and (max-width: 768px) {
     .comment {
       background-position: right center; } }
   @media screen and (max-width: 480px) {
     .comment {
       background-position: right center;
-      padding: 2.5rem 1.25rem 0.9375rem 1.25rem; } }
-
-.comment__text {
-  margin-bottom: 1.875rem; }
+      padding: 2.5rem 1.25rem 0.9375rem 1.25rem;
+      margin-bottom: 1.25rem; } }
 
 .comment__icon {
   display: block;
@@ -1790,13 +1787,15 @@ img {
   width: 100%;
   height: 100%; }
 
-@media screen and (max-width: 768px) {
-  .comment__text {
-    text-align: center; } }
-
-@media screen and (max-width: 480px) {
-  .comment__text {
-    text-align: center; } }
+.comment__text {
+  margin-bottom: 1.875rem; }
+  @media screen and (max-width: 768px) {
+    .comment__text {
+      text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .comment__text {
+      text-align: center;
+      margin-bottom: 1.25rem; } }
 
 .comment__pic {
   width: 15.9375rem;
@@ -1823,6 +1822,8 @@ img {
       margin-bottom: 1.25rem; } }
   @media screen and (max-width: 480px) {
     .comment__title {
+      text-align: center;
+      font-family: 'Alegreya Sans Medium', Arial, sans-serif;
       margin-bottom: 0.625rem; } }
 
 .comment__text {
@@ -1837,26 +1838,29 @@ img {
   width: 100%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   font-size: 1rem;
   position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 1.0625rem; }
+  padding: 3.125rem 3.125rem 2.3125rem 3.125rem; }
   @media screen and (max-width: 768px) {
     .comment__item {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      margin-right: 0; } }
+      flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    .comment__item {
+      padding: 0; } }
 
 .comment__item--active {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .comment__desc {
   display: -webkit-box;
@@ -2720,11 +2724,11 @@ ul.bar__list {
     -ms-flex-align: center;
     align-items: center;
     cursor: pointer;
-    z-index: 100; } }
+    z-index: 80; } }
 
 @media screen and (max-width: 480px) {
   .gamburger__menu {
-    z-index: 100; } }
+    z-index: 80; } }
 
 .gamburger__menu-point {
   width: 1.5625rem;
@@ -2802,6 +2806,10 @@ ul.bar__list {
   right: 0;
   left: 0;
   bottom: 0; }
+
+.modal-review.is-active {
+  display: block;
+  z-index: 90; }
 
 .modal-review__inner {
   text-align: center;

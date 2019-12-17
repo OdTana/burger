@@ -50,9 +50,6 @@
   background-repeat: no-repeat; 
   background-position: right top; 
   background-size: cover;
-  padding: rem(50px)  rem(50px)  rem(37px)  rem(50px) ;
-
-
   @include tablets {
       background-position: right center; 
      
@@ -61,13 +58,12 @@
   @include phones {
       background-position: right center; 
       padding: rem(40px)  rem(20px)  rem(15px)  rem(20px) ;
+      margin-bottom: rem(20px);
   }
 
 }
 
-.comment__text{
-  margin-bottom: rem(30px);
-}
+
 
 .comment__icon{
   display: block;
@@ -79,14 +75,14 @@
 
 
 .comment__text{
+  margin-bottom: rem(30px);
   @include tablets {
       text-align: center;
-     
-      
   }
+
   @include phones {
       text-align: center;;
-    
+     margin-bottom: rem(20px);
   }
 }
 .comment__pic{
@@ -116,6 +112,8 @@
       margin-bottom: rem(20px)
   }
   @include phones {
+    text-align: center;
+    font-family: 'Alegreya Sans Medium', Arial, sans-serif;
       margin-bottom: rem(10px);
       
   } 
@@ -135,22 +133,25 @@
 .comment__item{
   width: 100%;
   flex-shrink: 0;
-  display: flex;
+  display: none;
   font-size: rem(16px) ;
   position: relative;
   align-items: center;
-  margin-right: rem(17px);
+  padding: rem(50px)  rem(50px)  rem(37px)  rem(50px) ;
   @include tablets {
     flex-direction: column;
-    margin-right: 0;
+   
   }
-  
+  @include phones{
+    padding: 0;
+  }
 }
 
 
 .comment__item--active{
   width: 100%;
   overflow: hidden;
+  display: flex;
 }
 
 

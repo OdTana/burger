@@ -8,6 +8,12 @@
     bottom: 0;
 }
 
+.modal-review.is-active{
+    display: block ;
+    z-index: 90;
+}
+
+
 .modal-review__inner{
     text-align: center;
     max-width: rem(300px);
