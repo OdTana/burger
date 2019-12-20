@@ -2,7 +2,7 @@
 
 .why{
   position: relative;
-  background: url(../img/icon/why_sect/pattern_why.png) no-repeat center left;
+  background: url(../../img/icon/why_sect/pattern_why.png) no-repeat center left;
   text-align: center;
   @include phones {
     background: none;
@@ -16,7 +16,7 @@
   height: rem(240px);
   position: absolute;
   background:  
-  url(../img/icon/why_sect/raspberry.png) left bottom no-repeat;
+  url(../../img/icon/why_sect/raspberry.png) left bottom no-repeat;
   transform: translateY(50%);
   bottom: 0;
   left: 0;
@@ -71,7 +71,7 @@
 .why__item::after{
   content: "";
   position: absolute;
-  background: url(../img/icon/why_sect/between.png) no-repeat center center;
+  background: url(../../img/icon/why_sect/between.png) no-repeat center center;
   width: 100%;
   height: 1.25rem;
   display: block;

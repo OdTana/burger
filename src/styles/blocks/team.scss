@@ -1,7 +1,7 @@
 
 .team{
   position: relative;
-  background:url(../img/icon/team_sec/pattern_team.png) right top no-repeat;
+  background:url(../../img/icon/team_sec/pattern_team.png) right top no-repeat;
 }
 
 .team:after{
@@ -11,7 +11,7 @@
   height: rem(125px);
   position: absolute;
   background:  
-  url(../img/icon/team_sec/blueberries.png) no-repeat;
+  url(../../img/icon/team_sec/blueberries.png) no-repeat;
   background-size: contain;
   transform: translateY(-50%);
   top: 0;
@@ -98,7 +98,7 @@
 
 .team__name:after{
   content: "";
-  background: url(../img/icon/team_sec/polygon.svg) no-repeat center center;
+  background: url(../../img/icon/team_sec/polygon.svg) no-repeat center center;
   width: rem(10px);
   height: rem(10px);
   display: inline-block;
@@ -111,7 +111,7 @@
 }
 
 .team__item--active .team__name:after{
-  background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
+  background: url(../../img/icon/team_sec/polygon_active.svg) no-repeat center center;
 }
 
 .team__comment{
@@ -150,7 +150,7 @@
 
 
 // .team__item:active .team__name:after{
-//   background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
+//   background: url(../../img/icon/team_sec/polygon_active.svg) no-repeat center center;
 // }
 
 

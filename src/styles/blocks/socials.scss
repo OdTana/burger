@@ -18,13 +18,13 @@
 
 @each $socials__link in (vk, fb, inst, tw){
     .socials__link_#{$socials__link}{
-        background: url('../img/icon/contacts_sec/#{$socials__link}.svg') center center no-repeat;
+        background: url('../../img/icon/contacts_sec/#{$socials__link}.svg') center center no-repeat;
 
     }
 }
 
 .socials__item--active .socials__link_fb{
-    background: url(../img/icon/contacts_sec/fb_hover.png) center center no-repeat;
+    background: url(../../img/icon/contacts_sec/fb_hover.png) center center no-repeat;
 }
 
 
