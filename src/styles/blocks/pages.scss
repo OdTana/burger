@@ -4,10 +4,10 @@
     right: 5%;
     z-index: 2;
 
-    @include tablets {
-      display: none;
+    // @include tablets {
+    //   display: none;
     
-      }
+    //   }
 }
 
 .pages__elips{
@@ -19,10 +19,12 @@
     position: relative;
     margin-bottom: rem(5px);
     border: 1px solid transparent;
+    
 }
 
 .pages__elips:before{
     content: '';
+    cursor: pointer;
     display: block;
     width: rem(7px);
     height: rem(7px);
@@ -33,7 +35,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }  
-.pages__elips--active{
+.pages__elips.active{
     display: block;
     border: 1px solid $white;
  
@@ -43,4 +45,5 @@
     display: block;
     width: 100%;
     height: 100%;
+    // cursor: none;
 }

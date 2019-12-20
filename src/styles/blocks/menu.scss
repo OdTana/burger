@@ -1,6 +1,6 @@
 .menu{
     position: relative;
-    background: url(../img/icon/menu_sec/pattern_menu.png) no-repeat center center;
+    background: url(../../img/icon/menu_sec/pattern_menu.png) no-repeat center center;
     background-size: cover;
 }
 
@@ -20,7 +20,7 @@
     width: rem(125px) ;
     height: rem(130px) ;
     position: absolute;
-    background: url(../img/icon/menu_sec/ruspberry_menu.png) no-repeat;
+    background: url(../../img/icon/menu_sec/ruspberry_menu.png) no-repeat;
     background-size: contain;
     transform: translateY(-50%);
     top: 0;
@@ -137,19 +137,19 @@
 
 .menu__title-1 {
     height: 100%;
-    background: url(../img/icon/menu_sec/pattern_menulist1.png) center center no-repeat;
+    background: url(../../img/icon/menu_sec/pattern_menulist1.png) center center no-repeat;
     background-size: cover;
 }
 
 .menu__title-2 {
     height: 100%;
-    background: url(../img/icon/menu_sec/pattern_menulist2.png) center center no-repeat;
+    background: url(../../img/icon/menu_sec/pattern_menulist2.png) center center no-repeat;
     background-size: cover;
 }
 
 .menu__title-3 {
     height: 100%;
-    background: url(../img/icon/menu_sec/pattern_menulist3.png) center center no-repeat;
+    background: url(../../img/icon/menu_sec/pattern_menulist3.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -204,7 +204,7 @@
     @include phones {
     content: "";
     position: absolute;
-    background: url(../img/icon/menu_sec/close.svg) center center no-repeat;
+    background: url(../../img/icon/menu_sec/close.svg) center center no-repeat;
     width: rem(25px);
     height: rem(25px);
     z-index: 3;

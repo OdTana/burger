@@ -1,5 +1,5 @@
 .order{
-    background-image: url(../img/icon/order_sec/pattern_order.png);
+    background-image: url(../../img/icon/order_sec/pattern_order.png);
     background-repeat: no-repeat; 
     background-position: center center; 
     background-size: cover;
@@ -12,7 +12,7 @@
     width: rem(50px);
     height: rem(50px);
     position: absolute;
-    background: url(../img/icon/order_sec/berry_order.png) no-repeat;
+    background: url(../../img/icon/order_sec/berry_order.png) no-repeat;
     bottom: 17%;
     left: 5%;
 
@@ -30,7 +30,7 @@
     width: rem(135px);
     height: rem(190px);
     position: absolute;
-    background: url(../img/icon/order_sec/leaf_order.png) no-repeat;
+    background: url(../../img/icon/order_sec/leaf_order.png) no-repeat;
     bottom: 17%;
     right: 5%;
 
@@ -225,7 +225,7 @@
 .option__checkbox:checked + .option__checkbox-fake::after{
     width: rem(25px);
     height: rem(25px);
-    background: url(../img/icon/order_sec/check.png) center center no-repeat;
+    background: url(../../img/icon/order_sec/check.png) center center no-repeat;
    
 }
 

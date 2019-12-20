@@ -11,11 +11,11 @@
     height: rem(25px);
     align-items: center;
     cursor: pointer;
-    z-index: 100;
+    z-index: 80;
     }
       
       @include phones {
-        z-index: 100;
+        z-index: 80;
       }
 
 }
