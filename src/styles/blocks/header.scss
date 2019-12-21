@@ -1,0 +1,38 @@
+
+  .header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(22px) ;
+    @include tablets {
+      justify-content: flex-start;
+    }
+  @include phones {
+    justify-content: flex-start;
+    padding-top: rem(18px) ;
+    }
+
+   
+  }
+
+  .phone__number, .logo{
+    font-size: rem(24px) ;
+  }
+
+  .phone{
+    display: inline-block;
+  }
+  
+.phone:before{
+  content: "";
+  display: inline-block;
+  width: rem(20px) ;
+  height: rem(20px) ;
+  background: url(../../img/icon/chocco_sect/phone__icon.png) no-repeat center center;
+}
+
+ .logo{
+  max-width: rem(60px) ;
+}
+
+ 

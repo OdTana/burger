@@ -1,0 +1,31 @@
+.modal-review{
+    display: none;
+    background: $grey;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.modal-review.is-active{
+    display: block ;
+    z-index: 90;
+}
+
+
+.modal-review__inner{
+    text-align: center;
+    max-width: rem(300px);
+    padding: rem(40px) rem(50px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    height: auto;
+}
+
+.modal-review__inner .order-button{
+    margin-top: rem(20px);
+}

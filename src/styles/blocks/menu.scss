@@ -1,0 +1,244 @@
+.menu{
+    position: relative;
+    background: url(../../img/icon/menu_sec/pattern_menu.png) no-repeat center center;
+    background-size: cover;
+}
+
+.menu__container{
+    display: flex;
+    color: $white;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu:before{
+    content: '';
+    overflow: hidden;
+    width: rem(125px) ;
+    height: rem(130px) ;
+    position: absolute;
+    background: url(../../img/icon/menu_sec/ruspberry_menu.png) no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include tablets {
+        width: rem(100px);
+        height: rem(100px);
+      }
+    @include phones {
+        width: rem(100px);
+        height: rem(100px);
+      }
+
+}
+
+.menu__content{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 1;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.menu__list{
+    height: 100%;
+    display: flex;
+    // align-items: stretch;
+    cursor: pointer;
+    align-items: flex-end;
+}
+
+.menu__base{
+    font-size: rem(48px) ;
+    padding-top: rem(100px) ;
+    text-transform: uppercase;
+    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    width: 100%;
+    padding-left: rem(50px) ;
+    @include phones{
+        padding-left: rem(20px) ;
+    }
+}
+
+// .menu__base h2{
+//     font-size: rem(48px) ;
+//     padding-top: rem(100px) ;
+//     text-transform: uppercase;
+//     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+// }
+
+// .menu__accordion{
+//     display: flex;
+//     position: absolute;
+//     height: 100%;
+//     max-width: 70%;
+//     right: 0;
+
+//     @include phones {
+//         max-width: 100%;
+//     }
+// }
+
+// .menu__title h2{
+//     font-size: rem(48px) ;
+//     transform: rotate(-180deg);
+//     white-space: nowrap;
+//     font-family: 'Alegreya Sans Medium', Arial, sans-serif;
+//     text-transform: none;
+//     writing-mode: vertical-rl;
+
+//     @include phones {
+//         font-size: rem(36px)
+//       }
+    
+// }
+
+.menu__title{
+    display: flex;
+    padding: rem(45px) rem(30px);
+    font-size: rem(48px) ;
+    transform: rotate(-180deg);
+    white-space: nowrap;
+    font-family: 'Alegreya Sans Medium', Arial, sans-serif;
+    text-transform: none;
+    writing-mode: vertical-rl;
+
+    @include tablets {
+        padding-bottom: rem(40px);
+        padding-left: rem(25px);
+        padding-right: rem(25px);
+    }
+    
+    @include phones {
+        font-size: rem(36px);
+      padding-bottom: rem(30px);
+      padding-left: rem(10px);
+      padding-right: rem(10px);
+    }
+}
+
+.menu__list--active .menu__title{
+    color: $green;
+}
+
+
+.menu__title-1 {
+    height: 100%;
+    background: url(../../img/icon/menu_sec/pattern_menulist1.png) center center no-repeat;
+    background-size: cover;
+}
+
+.menu__title-2 {
+    height: 100%;
+    background: url(../../img/icon/menu_sec/pattern_menulist2.png) center center no-repeat;
+    background-size: cover;
+}
+
+.menu__title-3 {
+    height: 100%;
+    background: url(../../img/icon/menu_sec/pattern_menulist3.png) center center no-repeat;
+    background-size: cover;
+}
+
+.menu__text{
+    font-size: rem(16px);
+    display: flex;
+    margin: 0;
+    flex: 1;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    line-height: 1.6;
+    position: relative;
+    background: rgba(57, 60, 62, 0.93);
+    // opacity: 0;
+    color: rgba(255, 255, 255, 0);
+    
+    @include phones{
+        font-size: rem(15px);
+    }
+
+}
+.menu__list--active .menu__text{
+    overflow: visible;
+    // width: 100%;
+    // opacity: 1;
+    color: $white;
+    transition: color 0.4s 0.2s;
+    // visibility: visible;
+}
+
+
+// .menu__text:before{
+//     @include phones {
+//     content: "";
+//     position: absolute;
+//     background: url(../img/icon/menu_sec/close.svg) center center no-repeat;
+//     width: rem(25px);
+//     height: rem(25px);
+//     z-index: 3;
+//     display: flex;
+//     top: 1%;
+//     right: 5%;
+//     cursor: pointer;
+//     z-index: 5;
+//     }   
+     
+// }
+
+.close{
+    // display: none;
+    @include phones {
+    content: "";
+    position: absolute;
+    background: url(../../img/icon/menu_sec/close.svg) center center no-repeat;
+    width: rem(25px);
+    height: rem(25px);
+    z-index: 3;
+    // display: flex;
+    top: 1%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 5;
+    }   
+     
+}
+
+
+
+
+.menu__text p{
+    padding-left: rem(28px);
+    padding-right: rem(25px);
+    padding-top: rem(50px);
+    z-index: 3;
+    @include phones {
+        padding-left: rem(15px);
+        padding-right: rem(15px);
+        padding-top: rem(35px);
+        
+    }
+
+}
+
+
+.menu__list--active{
+    @include phones{
+        flex-shrink: 0;
+        order: 1;
+        width: 100%;
+    }
+}

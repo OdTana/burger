@@ -1,0 +1,92 @@
+
+.gamburger__menu{
+    @include tablets {
+   
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 5%;
+    right: 5%;
+    height: rem(25px);
+    align-items: center;
+    cursor: pointer;
+    z-index: 80;
+    }
+      
+      @include phones {
+        z-index: 80;
+      }
+
+}
+
+
+
+.gamburger__menu-point{
+    width: rem(25px);
+    height: rem(6px);
+    background-color: $white;
+    display: block;
+    border-radius: rem(3px);  
+
+}
+
+.gamburger__menu-page{
+  position: fixed;
+  background-color: $dark-grey;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+ 
+}
+
+
+.nav__gamburger{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+}
+
+.nav__list_gamburger{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(46px);
+  color: $white;
+  text-align: center;
+  @include phones{
+    font-size: rem(30px);
+    
+  }
+}
+.nav__item_gamburger{
+  margin-bottom: rem(40px) ;
+  padding: 0;
+
+}
+
+.nav__item_gamburger:last-child{
+  margin-bottom: 0 ;
+  
+
+}
+
+.gamburger__menu-page.overlay--open{
+  opacity: 0.99;
+  visibility: visible;
+  height: 100%;
+}
+

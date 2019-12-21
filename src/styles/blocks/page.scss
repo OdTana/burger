@@ -1,0 +1,194 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+   
+}
+
+.content--left{
+    display: flex;
+    flex-direction: column;
+    // width: rem(470px);
+    align-items: center;
+    flex: 1;
+    margin: 0 auto;
+    @include tablets {
+      align-items: center;
+      width: 100%;
+      margin-bottom: rem(40px);
+      justify-content: center;
+
+    }
+
+    @include phones {
+      align-items: center;
+      width: 100%;
+      margin-bottom: rem(30px);
+      justify-content: center;
+    }
+}
+
+.content--right{
+    width: rem(490px);
+    height: rem(490px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include tablets {
+    width: 100%;
+    height: rem(380px);
+    margin-bottom: rem(40px);
+    }
+
+    @include phones {
+      width: 100%;
+    // max-width: rem(300px);
+    height: rem(230px);
+    margin-bottom: rem(20px);
+    flex-shrink: 0;
+    }
+
+}
+  
+  .page--color-white{
+    color: $white;
+  }
+
+  .page{
+    position: relative;
+    background-color: #61c4d9;
+    background-image: url(../../img/icon/chocco_sect/pattern.png);
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: cover;
+    // z-index: 1;
+
+
+    @include tablets {
+       background-position: right top;
+       background-size: auto;
+    }
+
+    @include phones {
+       background-position: right top;
+       background-size: auto;
+    }
+  }
+
+  .page::before{
+    content: '';
+    overflow: hidden;
+    width: rem(60px);
+    height: rem(110px);
+    position: absolute;
+    background:  
+    url(../../img/icon/chocco_sect/leaf3.png) no-repeat;
+    background-size: contain;
+    transform: translateY(50%);
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    
+    @include tablets {
+      width: rem(40px);
+      height: rem(70px);
+      bottom: 65%;
+      left: 25%;
+      
+    }
+    @include phones {
+      left: 15%;
+    }
+
+}
+
+  
+.page:after{
+    content: '';
+    overflow: hidden;
+    max-width: rem(1100px);
+    width: rem(440px);
+    height: rem(350px);
+    position: absolute;
+    background:  
+    url(../../img/icon/chocco_sect/gr_berries.png) no-repeat;
+    background-size: contain;
+    transform: translateY(20%);
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    
+    @include tablets {
+      width: rem(300px);
+      height: rem(245px);
+      bottom: 55%;
+      right: 20%;
+      z-index: 1;
+    }
+    @include phones {
+      bottom: 60%;
+      width: rem(250px);
+      height: rem(225px);
+      right: 10%;
+    }
+
+}
+
+  .page__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+.page__content{
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
+    // margin: 0 auto;
+
+    @include tablets {
+      justify-content: center;
+      flex-direction: column-reverse;
+      align-items: center;
+      // width: 100%;
+    
+    }
+
+    @include phones {
+      justify-content: center;
+      flex-direction: column-reverse;
+      align-items: center;
+    // width: 100%;
+    }
+}
+  
+
+  .page__container--left .content{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content__container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .info{
+    @include tablets {
+      text-align: center;
+
+    }
+
+    @include phones {
+      text-align: center;
+    }
+  }
+
+

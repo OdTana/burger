@@ -1,0 +1,62 @@
+.button{
+        @include tablets {
+                text-align: center;
+                
+        }
+    
+        @include phones {
+                text-align: center;
+        }
+            
+}
+
+.order-button{
+        background-color: rgb(255, 255, 255);
+        padding: rem(23px) rem(34px);
+        border-radius: rem(45px);
+        color: $green;
+        font-size: rem(19px);
+        text-transform: uppercase;
+        font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif;
+        border: 1px solid transparent;
+        outline: unset;
+        cursor: pointer;
+        
+    
+        @include phones {
+                padding: rem(20px) rem(30px);
+                font-size: rem(17px);
+        }
+       
+}
+
+.order-button:focus{
+        border-color: $green;
+}
+
+.order-button:hover{
+        background-color: $white-grey;
+}
+
+.button--color--green .order-button{
+        background-color: $green;
+        color: $white;
+    
+    }
+    
+ .button--color--green .order-button:hover {
+        background-color: $white;
+        color: $green;
+        border-color: $green;
+    }
+    
+.button--color--none .order-button{
+        background-color: transparent;
+        font-family: inherit;
+        text-transform: none;
+}
+
+.button--color--none .order-button:hover {
+        color: $white;
+       
+    }

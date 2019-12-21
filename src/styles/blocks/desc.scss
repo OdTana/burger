@@ -1,0 +1,301 @@
+
+.desc{
+    display: flex;
+    margin-bottom: rem(50px) ;
+    align-items: center;
+
+    @include tablets {
+        justify-content: center;
+    }
+
+    @include phones {
+        justify-content: center;
+        margin-bottom: rem(30px) ;
+    }
+}
+
+.desc__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.desc__list--vertical{
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }    
+
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+    }    
+
+
+}
+
+.desc__list--left{
+    width: rem(470px) ;
+    z-index: 2;
+
+    @include tablets {
+        justify-content: space-between;
+        
+    }
+    @include phones {
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+}
+
+.desc__list--left .desc__item{
+    width: calc(100%/3);
+
+}
+
+.desc__list--left .desc__icon{
+    width: rem(50px) ;
+    height: rem(50px) ;
+    display: flex;
+    align-items: center;
+
+}
+
+.desc__item{
+    display: flex;
+    font-size: rem(16px) ;
+    position: relative;
+    align-items: center;
+    margin-right: rem(17px);
+    @include phones {
+        margin-right: rem(5px);
+        
+        }
+}
+
+.desc__item:last-child{
+    padding-right: 0;
+}
+
+.desc__list--left .desc__item:hover{
+    color: $green;
+    cursor: pointer;
+}
+
+
+
+
+
+.desc__list--vertical{
+    align-items: flex-start;
+}
+
+.desc__list--vertical .desc__item{
+    // width: calc(100%/3 - 17px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: rem(25px);
+    padding: 0 3%;
+    margin-right: 0;
+    
+
+    @include tablets {
+      height: 100%;
+      margin-right: 0;
+        
+    }
+    
+    @include phones {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+}
+
+.desc__list--vertical .desc__item:after{
+    content: "";
+    position: absolute;
+    background: url(../../img/icon/why_sect/between.png) no-repeat center center;
+    width: 100%;
+    height: rem(20px) ;
+    display: block;
+    justify-content: center;
+    transform: translateX(50%);
+    top: rem(50px) ;
+
+    @include tablets {
+        display: none;
+        margin-bottom: rem(25px);
+        
+    }
+}
+
+.desc__list--vertical .desc__item:last-child::after{
+    display: none;
+}  
+.desc__comment{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%;
+    justify-content: center;
+    
+    @include tablets {
+        align-items: center;
+        
+    }
+    @include phones {
+        align-items: center;
+      
+    }
+}
+
+.desc__list--vertical .desc__comment{
+    @include tablets {
+        align-items: center;
+        
+    }
+    @include phones {
+        align-items: flex-start;
+      
+    }
+}
+
+.desc__list--vertical .desc__text{
+    @include tablets {
+        align-items: center;
+       
+        
+    }
+    @include phones {
+        text-align: start;;
+      
+    }
+}
+
+.desc__pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.desc__list--vertical .desc__pic{
+    height: rem(125px) ;
+     width: rem(125px) ;
+     background-color: $white-grey;
+     border-radius: 50%;
+     margin-bottom: rem(35px) ;
+     flex-shrink: 0;
+
+     @include tablets {
+        margin-bottom: rem(25px) ;
+        
+    } 
+    @include phones {
+        margin-bottom: 0 ;
+        margin-right: rem(10px);
+        
+    } 
+
+
+ }
+
+
+
+.desc__title{
+    font-size: rem(27px) ;
+    margin-bottom: rem(25px) ;
+    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+    @include tablets {
+        margin-bottom: rem(20px)
+    }
+    @include phones {
+        margin-bottom: rem(10px);
+        
+    } 
+}
+
+.desc__text{
+    font-size: rem(16px) ;
+    padding-left: rem(10px) ; 
+
+
+
+}
+
+.desc__list--vertical .desc__text{
+    font-family: 'Alegreya Sans Light', Arial, sans-serif;
+    font-size: rem(18px) ;
+    color: $grey;
+    padding-left: 0;
+   
+
+    @include tablets {
+        text-align: center; 
+        
+        
+    }
+
+    @include phones {
+        text-align: start;
+        
+    }
+}
+
+
+.desc__list--vertical .desc__icon{
+    width: rem(70px) ;
+    height: rem(70px) ;
+
+}
+.desc__comment .desc__text{
+    font-size: rem(18px) ;
+    color: $grey;
+    padding-left: 0;
+
+
+    // @include tablets {
+    //     align-items: center;
+    //     justify-content: center;
+        
+        
+    // }
+    // @include phones {
+    //     text-align: center;
+        
+    // }
+}
+
+
+.desc__author{
+    font-family: 'Alegreya Sans Medium', Arial, sans-serif;
+    color: $grey;
+    font-size: rem(18px) ;
+}
+
+.desc__list--left .desc__icon{
+    fill: transparent;
+    stroke:$blue;
+    stroke-width:0.5;
+    stroke-miterlimit:10;
+}
+
+.desc__list--left .desc__item:hover .desc__icon{
+    stroke:$green;
+    
+}
+
+.desc__list--vertical .desc__icon{
+    fill:none;
+    stroke:#000000;
+    stroke-width:0.75;
+    stroke-miterlimit:10;
+}
