@@ -1,0 +1,66 @@
+.arrow__prev, .arrow__next{
+    position: absolute;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .arrow__prev{
+      top: 50%;
+      left: -6%;
+      @include tablets{
+          left: -5%;
+      }
+      @include phones{
+          left: -3%;
+          top: 25%;
+      }
+  
+  }
+  .arrow__prev-icon{
+      width: rem(20px);
+      height: rem(20px);
+      transform: rotate(90deg);
+      @include tablets{
+         
+          width: rem(35px);
+          height: rem(35px);
+          
+      }
+      @include phones{
+         
+          width: rem(30px);
+          height: rem(30px);
+         
+      }
+  }
+  .arrow__next{
+      top: 50%;
+      right: -6%;
+      @include tablets{
+          right: -5%;
+      }
+      @include phones{
+          right: -3%;
+          top: 25%;
+  
+      }
+  }
+  
+  .arrow__next-icon{
+      width: rem(20px);
+      height: rem(20px);
+      transform: rotate(-90deg);
+      @include tablets{
+          
+          width: rem(35px);
+          height: rem(35px);
+          
+      }
+      @include phones{
+         
+          width: rem(30px);
+          height: rem(30px);
+          
+      }
+      
+  }

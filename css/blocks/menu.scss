@@ -38,8 +38,14 @@
 }
 
 .menu__content{
-    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
     display: flex;
+    z-index: 1;
+    justify-content: flex-end;
+    height: 100%;
     width: 100%;
     margin-bottom: 0;
 }
@@ -53,33 +59,56 @@
 }
 
 .menu__base{
+    font-size: rem(48px) ;
+    padding-top: rem(100px) ;
+    text-transform: uppercase;
+    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
     display: flex;
     justify-content: flex-start;
     margin: 0;
     width: 100%;
     padding-left: rem(50px) ;
-}
-
-.menu__base h2{
-    font-size: rem(48px) ;
-    padding-top: rem(100px) ;
-    text-transform: uppercase;
-    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
-}
-
-.menu__accordion{
-    display: flex;
-    position: absolute;
-    height: 100%;
-    max-width: 70%;
-    right: 0;
-
-    @include phones {
-        max-width: 100%;
+    @include phones{
+        padding-left: rem(20px) ;
     }
 }
 
-.menu__title h2{
+// .menu__base h2{
+//     font-size: rem(48px) ;
+//     padding-top: rem(100px) ;
+//     text-transform: uppercase;
+//     font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+// }
+
+// .menu__accordion{
+//     display: flex;
+//     position: absolute;
+//     height: 100%;
+//     max-width: 70%;
+//     right: 0;
+
+//     @include phones {
+//         max-width: 100%;
+//     }
+// }
+
+// .menu__title h2{
+//     font-size: rem(48px) ;
+//     transform: rotate(-180deg);
+//     white-space: nowrap;
+//     font-family: 'Alegreya Sans Medium', Arial, sans-serif;
+//     text-transform: none;
+//     writing-mode: vertical-rl;
+
+//     @include phones {
+//         font-size: rem(36px)
+//       }
+    
+// }
+
+.menu__title{
+    display: flex;
+    padding: rem(45px) rem(30px);
     font-size: rem(48px) ;
     transform: rotate(-180deg);
     white-space: nowrap;
@@ -87,30 +116,24 @@
     text-transform: none;
     writing-mode: vertical-rl;
 
-    @include phones {
-        font-size: rem(36px)
-      }
-    
-}
-
-.menu__title{
-    display: flex;
-    padding-bottom: rem(45px);
-    padding-left: rem(30px);
-    padding-right: rem(30px);
-
     @include tablets {
         padding-bottom: rem(40px);
         padding-left: rem(25px);
         padding-right: rem(25px);
-        }
+    }
     
     @include phones {
+        font-size: rem(36px);
       padding-bottom: rem(30px);
       padding-left: rem(10px);
       padding-right: rem(10px);
     }
 }
+
+.menu__list--active .menu__title{
+    color: $green;
+}
+
 
 .menu__title-1 {
     height: 100%;
@@ -140,20 +163,44 @@
     overflow: hidden;
     line-height: 1.6;
     position: relative;
-
-}
-
-.menu__text:after{
-    content: "";
-    position: absolute;
     background: rgba(57, 60, 62, 0.93);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    // opacity: 0;
+    color: rgba(255, 255, 255, 0);
+    
+    @include phones{
+        font-size: rem(15px);
+    }
+
+}
+.menu__list--active .menu__text{
+    overflow: visible;
+    // width: 100%;
+    // opacity: 1;
+    color: $white;
+    transition: color 0.4s 0.2s;
+    // visibility: visible;
 }
 
 
-.menu__text:before{
+// .menu__text:before{
+//     @include phones {
+//     content: "";
+//     position: absolute;
+//     background: url(../img/icon/menu_sec/close.svg) center center no-repeat;
+//     width: rem(25px);
+//     height: rem(25px);
+//     z-index: 3;
+//     display: flex;
+//     top: 1%;
+//     right: 5%;
+//     cursor: pointer;
+//     z-index: 5;
+//     }   
+     
+// }
+
+.close{
+    // display: none;
     @include phones {
     content: "";
     position: absolute;
@@ -161,19 +208,16 @@
     width: rem(25px);
     height: rem(25px);
     z-index: 3;
-    display: flex;
-    top: 2%;
+    // display: flex;
+    top: 1%;
     right: 5%;
+    cursor: pointer;
+    z-index: 5;
     }   
      
 }
 
 
-
-.menu__list:active .menu__text{
-      overflow: visible;
-      width: 100%;
-}
 
 
 .menu__text p{
@@ -181,10 +225,20 @@
     padding-right: rem(25px);
     padding-top: rem(50px);
     z-index: 3;
+    @include phones {
+        padding-left: rem(15px);
+        padding-right: rem(15px);
+        padding-top: rem(35px);
+        
+    }
+
 }
 
-.menu__list--active .menu__text{
-    overflow: visible;
-    width: 100%;
-}
 
+.menu__list--active{
+    @include phones{
+        flex-shrink: 0;
+        order: 1;
+        width: 100%;
+    }
+}

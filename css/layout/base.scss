@@ -40,6 +40,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+body.body-menu--locked{
+  overflow: hidden;
+}
 
 .section{
   height: 100vh;
@@ -72,7 +75,8 @@ a {
 
   @include tablets {
     max-width: rem(730px);
-    width: 70%;
+    width: 80%;
+
 
   }  
 

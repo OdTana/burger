@@ -55,6 +55,7 @@
     height: 50%;
 
   }
+ 
 }
 
 // .team__item:nth-child(even) {
@@ -117,15 +118,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // height: 0;
-//  overflow: hidden;
+  // max-height: 0;
+ overflow: hidden;
  opacity: 0;
+ transition: opacity 0.5s;
 
 }
 
 .team__item--active .team__comment{
   overflow: visible;
   opacity: 1;
+  // max-height: 100%;
+  z-index: 1
+  
 }
 
 
@@ -139,22 +144,22 @@
 }
 
 
-.team__item:active .team__name{
-  color: $green;
-} 
+// .team__item:active .team__name{
+//   color: $green;
+// } 
 
 
-.team__item:active .team__name:after{
-  background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
-}
+// .team__item:active .team__name:after{
+//   background: url(../img/icon/team_sec/polygon_active.svg) no-repeat center center;
+// }
 
 
-.team__item:active .team__comment{
-  overflow: visible;
-  height: 100%;
-  opacity: 1;
-  transition: 0.5s;
-}
+// .team__item:active .team__comment{
+//   overflow: visible;
+//   height: 100%;
+//   opacity: 1;
+//   transition: 0.5s;
+// }
 
 
 
