@@ -538,9 +538,9 @@
                 </div>
             </section>
             <section class="section video"  id="three">
-                <div class="container content">
+                <div class="container content video__container">
                     <h2 class="about__title section__title_black section__title_center">Как мы работаем</h2>
-                    <div class="player">
+                    <!-- <div class="player">
                       <div class="player__wrapper">
                         <div id="yt-player"></div>
                         <div class="player__splash"></div>
@@ -555,6 +555,30 @@
                           <span class="player__duration-estimate">0:00</span>
                         </div>
                       </div>
+                    </div> -->
+                    <div class="video__player">
+                        <video id="player" poster = "../img/icon/video_sec/playercover.png">
+                            <source src="../img/icon/video_sec/videoplayback_short.mp4" type= "video/mp4">
+                        </video>
+                        <a href="/" class="video__player-icon" onclick="event.preventDefault()">
+                            <img src="../img/icon/video_sec/Play_white.png" alt class="play video__player-img">
+                        </a>
+                    </div>
+                    <div class="video__toolbar">
+                        <div class="duration">
+                            <a href="" class="duration-icon" onclick="event.preventDefault()">
+                                <img src="../img/icon/video_sec/Play_gray.png" alt class="play duration__img">
+                            </a>
+                            <input type="range" class="duration__length" id="durationLevel" min="0" max="Nan">
+                        </div>
+                        <div class="sound">
+                            <a href="" class="sound-icon" onclick="event.preventDefault()">
+                                <img src="../img/icon/video_sec/Volum_gray.png" class="sound__mic" id="mic">
+                            </a>
+                            <div class="sound__volume">
+                                <input type="range" class="duration__length duration__length--other" id="micLevel" min="0" max="10">
+                            </div>
+                        </div>
                     </div>
                   </div>
           
@@ -748,7 +772,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="js/player.js"></script>
+    <!-- <script src="js/player.js"></script> -->
     <!-- <script src="main.min.js"></script> -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
     </script>
