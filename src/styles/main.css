@@ -1344,9 +1344,6 @@ img {
       padding-left: 0.625rem;
       padding-right: 0.625rem; } }
 
-.menu__list--active .menu__title {
-  color: #0f5a47; }
-
 .menu__title-1 {
   height: 100%;
   background: url(../../img/icon/menu_sec/pattern_menulist1.png) center center no-repeat;
@@ -2230,9 +2227,7 @@ ul.bar__list {
 .player {
   position: relative;
   display: inline-block;
-  background-color: #f8faf9;
-  width: 37.5rem;
-  height: 23.125rem; }
+  background-color: #f8faf9; }
   .player.hidden {
     opacity: 0;
     -webkit-transition: opacity 0.3s;
@@ -2329,6 +2324,9 @@ ul.bar__list {
   left: 0; }
 
 .player__duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #626262;
   font-weight: bold; }
 

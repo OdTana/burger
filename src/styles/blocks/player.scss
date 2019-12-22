@@ -45,8 +45,8 @@
   position: relative;
   display: inline-block;
   background-color: #f8faf9;
-  width: rem(600px);
-  height: rem(370px);
+  // width: rem(600px);
+  // height: rem(370px);
 
   &.hidden {
     opacity: 0;
@@ -150,6 +150,7 @@
 }
 
 .player__duration {
+  display: flex;
   color: #626262;
   font-weight: bold;
 }
