@@ -1,0 +1,32 @@
+.map {
+	height: 100vh;
+	width: 100%;
+}
+
+.map__hint {
+    padding: rem(20px);
+    min-height: rem(55px);
+    min-width: rem(195px);
+    font-size: rem(20px);
+	line-height: 1;
+	color:$green;
+    background-color: $white-green;
+	// background-image: linear-gradient(to top, $white-green 0%, $green 48%, $white-green 74%, $white-green 100%);
+	border-radius: 20px;
+}
+
+.map__balloon {
+	padding: rem(20px);
+	font-size: rem(20px);
+	line-height: 1;
+	color:$green;
+	background-color: $white-green;
+	// background-image: linear-gradient(to top, $white-green 0%, $green 48%, $white-green 74%, $white-green 100%);
+	border-radius: rem(20px);
+}
+
+// .map__chocco-img {
+// 	float: right;
+// 	height: 100px;
+// 	width: 100px;
+// }

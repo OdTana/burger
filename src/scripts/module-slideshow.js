@@ -1,3 +1,4 @@
+
 //СЛАЙДШОУ
 ;(function () {
     const comment = document.querySelectorAll('.comment__item');
@@ -17,3 +18,5 @@
     }
 
 })()
+
+
