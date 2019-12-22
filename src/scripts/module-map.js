@@ -65,7 +65,7 @@ function init() {
         },
         {
           iconLayout: 'default#image',//вид маркера-иконки
-          iconImageHref: '../../img/icon/map_sec/marker.png',//путь к иконке
+          iconImageHref: '../img/icon/map_sec/marker.png',//путь к иконке
           iconImageSize: [50, 60],//размер иконки: ширина и высот
           iconImageOffset: [-23, -57]//смещение метки чтобы ее ножка была прямо в адресе (а не ее левый верхний угол)
           // iconImageClipRect: [[415, 0], [461, 57]]//координаты иконки внутри метки
