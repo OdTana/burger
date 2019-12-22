@@ -2,8 +2,8 @@ ymaps.ready(init);
 
 var placemarks = [ // созд массив с метками
     {
-        latitude: 55.75,
-        longitude: 37.57,
+        latitude: 55.75201414, 
+        longitude: 37.57570717,
         hintContent: '<div class="map__hint">ул. Новый Арбат , д. 31</div>',
         balloonContent: [
             '<div class="map__balloon">',
@@ -13,8 +13,8 @@ var placemarks = [ // созд массив с метками
         ]
     },
     {
-        latitude: 55.74,
-        longitude: 37.58,
+        latitude: 55.74753109, 
+        longitude: 37.58171207,
         hintContent: '<div class="map__hint">Смоленская пл., д. 3</div>',
         balloonContent: [
             '<div class="map__balloon">',
@@ -24,9 +24,9 @@ var placemarks = [ // созд массив с метками
         ]
     },
     {
-      latitude: 55.75,
-      longitude: 37.63,
-      hintContent: '<div class="map__hint">Лучников пер, д. 44</div>',
+      latitude: 55.76345041, 
+      longitude: 37.62327162,
+      hintContent: '<div class="map__hint">Рождественка, д. 11</div>',
       balloonContent: [
           '<div class="map__balloon">',
           // '<img class="map__chocco-img" src="img/burger.png" alt="Шоко"/>',
@@ -35,9 +35,9 @@ var placemarks = [ // созд массив с метками
       ]
     },
     {
-        latitude: 55.74,
-        longitude: 37.59,
-        hintContent: '<div class="map__hint">Филипповский пер., д. 8</div>',
+        latitude: 55.73754514, 
+        longitude: 37.58758660,
+        hintContent: '<div class="map__hint">Зубовский бульвар, д. 31</div>',
         balloonContent: [
             '<div class="map__balloon">',
             // '<img class="map__chocco-img" src="img/burger.png" alt="Шоко"/>',
@@ -50,7 +50,7 @@ var placemarks = [ // созд массив с метками
 
 function init() {
     var map = new ymaps.Map('map', {
-        center: [55.75, 37.62],//центр карты 55.75399400, 37.62209300
+        center: [55.75676933, 37.62126554],//центр карты 55.75399400, 37.62209300
         zoom: 13,//коэф масштабирования
         controls: ['zoomControl'],//оставили зум на карте
         behaviors: ['drag'] // никакого поведения по умолчанию не будет на карте, кроме перетаскиваня левой кнопкой мыши
