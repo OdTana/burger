@@ -23,10 +23,25 @@
 	background-color: $white-green;
 	// background-image: linear-gradient(to top, $white-green 0%, $green 48%, $white-green 74%, $white-green 100%);
 	border-radius: rem(20px);
+	@include phones{
+		padding: rem(10px);
+	font-size: rem(12px);
+	}
 }
 
 // .map__chocco-img {
 // 	float: right;
 // 	height: 100px;
 // 	width: 100px;
+// }
+
+// #id_157714931905349412626{
+// 	@include phones{
+// 	width: rem(230px);
+// 	}
+// // }
+// .map__balloon {
+// 	@include phones{
+// 		display: none;
+// 	}
 // }
