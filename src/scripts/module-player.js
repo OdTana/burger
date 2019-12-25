@@ -48,6 +48,7 @@ $().ready(function(){
         intervalId = setInterval(updataDuration, 1000/66);//запуск перемещеения ползунка с перидоичностью 1000/66 (мб любое)
       }else{//если не стояло на паузе
         stopInterval(intervalId);//останавливается выполнение функции (чтобы не происходила утечка памяти)
+        
       }
   }
   
@@ -88,7 +89,7 @@ $().ready(function(){
 
   function changeSoundVolume(){// вызываетсая когда отпустили мышку
     video.volume = soundControl.value/MAX_SOUND_VALUE;
-    console.log (video.volume)
+    // console.log (video.volume)
   }
 
 

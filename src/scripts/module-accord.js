@@ -42,7 +42,7 @@ let MenuAcc = () => {
         // let links = document.querySelector(".menu__title");
         let linksWidth = links[0].offsetWidth;
         let reqWidth = windowWidth - linksWidth * links.length;
-        console.log(reqWidth);
+        // console.log(reqWidth);
         return reqWidth > 550 ? 550 : reqWidth;
     };
 
@@ -50,6 +50,8 @@ let MenuAcc = () => {
         let activeText = activeElement.querySelector('.menu__text');
         activeText.style.width = "0px";
         activeElement.classList.remove('menu__list--active');
+        let close = document.querySelector(".close");
+        close.style.display = "none";
     }
 
     links.forEach(function(elem){
@@ -57,13 +59,15 @@ let MenuAcc = () => {
             e.preventDefault();
             let link = e.target;
             let active = document.querySelector('.menu__list--active');//проверяем, есть ли в .team__list элемент с таким классом'.team__item--active'. Если есть, то в active запишется ссылка на этот эл-т
-        
+            let close = document.querySelector(".close");
             if(active){//всегда закрывает активный элемент, если он есть
                     let activeText = active.querySelector('.menu__text');
                     activeText.style.width = "0px";
+                    close.style.display = "none";
                     active.classList.remove('menu__list--active');
             }
             if(!active || active.querySelector('.menu__title') !== link){//если нет активного эл-та на странице ИЛИ если мы кликаем на другой (отличный от открытого) элемент ТО нужно открывать
+                    close.style.display = "flex";
                     let current = link.closest('.menu__list'); //ищем родителя, оторого нужно раскрыть
                     current.classList.add('menu__list--active');//добавляем родителю активный класс, тк он стилизуется
                     let currentText = current.querySelector('.menu__text');// в этом родителе ищу эл-т '.team__comment'

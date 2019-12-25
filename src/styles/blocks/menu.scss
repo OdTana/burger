@@ -200,7 +200,7 @@
 // }
 
 .close{
-    // display: none;
+    
     @include phones {
     content: "";
     position: absolute;
@@ -208,11 +208,12 @@
     width: rem(25px);
     height: rem(25px);
     z-index: 3;
-    // display: flex;
+    display: none;
     top: 1%;
     right: 5%;
     cursor: pointer;
     z-index: 5;
+    
     }   
      
 }

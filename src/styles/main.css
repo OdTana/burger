@@ -1394,6 +1394,7 @@ img {
     width: 1.5625rem;
     height: 1.5625rem;
     z-index: 3;
+    display: none;
     top: 1%;
     right: 5%;
     cursor: pointer;
@@ -2365,6 +2366,33 @@ ul.bar__list {
       height: 3.75rem;
       left: 2%; } }
 
+.player__start {
+  width: 0;
+  height: 0;
+  border: 11px solid transparent;
+  border-left-color: #626262;
+  padding: 0;
+  border-right-width: 0;
+  background: transparent;
+  outline: none;
+  position: relative; }
+  .player__start.paused {
+    width: 14px;
+    height: 22px;
+    border: none; }
+    .player__start.paused:after, .player__start.paused:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px;
+      top: 0;
+      bottom: 0;
+      background: #626262; }
+    .player__start.paused:after {
+      right: 0; }
+    .player__start.paused:before {
+      left: 0; }
+
 .order {
   background-image: url(../../img/icon/order_sec/pattern_order.png);
   background-repeat: no-repeat;
@@ -2699,6 +2727,9 @@ ul.bar__list {
   opacity: 0.99;
   visibility: visible;
   height: 100%; }
+
+.button__gamburger--active {
+  display: none; }
 
 .modal-review {
   display: none;
