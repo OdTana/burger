@@ -1,0 +1,23 @@
+
+
+.order-button{
+        background-color: rgb(255, 255, 255);
+        padding: 23px 34px;
+        border-radius: 45px;
+        color: $green;
+        font-size: 19px;
+        text-transform: uppercase;
+        font-family: 'Alegreya Sans ExtraBold', Arial, sans-serif;
+        border: 1px solid transparent;
+        outline: unset;
+        cursor: pointer;
+        
+}
+
+.order-button:focus{
+        border-color: $green;
+}
+
+.order-button:hover{
+        background-color: $white-grey;
+}

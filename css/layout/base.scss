@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Alegreya Sans Regular', Arial, sans-serif;
+    font-size: 18px;
+    color: $black;
+  }
+
+*{
+  box-sizing: border-box;
+}
+  
+ h1, h2, h3, h4, h5{
+   margin: 0;
+ }
+
+ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section{
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  z-index: 1; //чтобы отображались наведения ладошкой на все ссылки/кнопки//
+}
+
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    min-width: 1100px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+ul, p, h5 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  

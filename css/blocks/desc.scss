@@ -1,0 +1,155 @@
+
+.desc{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.desc__list{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+.desc__list--left{
+    width: 470px;
+}
+
+.desc__list--left .desc__item{
+    width: calc(100%/3 - 16px);
+}
+
+.desc__list--left .desc__icon{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+
+}
+
+.desc__item{
+    display: flex;
+    font-size: 16px;
+    position: relative;
+    align-items: center;
+
+}
+
+.desc__item:last-child{
+    padding-right: 0;
+}
+
+.desc__list--left .desc__item:hover{
+    color: $green;
+    cursor: pointer;
+}
+
+.desc--comment .desc__pic{
+    width: 255px;
+    height: 255px;
+    margin-right: 20px;
+    flex-shrink: 0; //чтобы картинка не схлопывалась, если не будет задан flex-basis//
+    
+}
+.desc--comment{
+    background: url(../../img/icon/comment_sec/pattern_comment.png) no-repeat;
+    padding: 50px 20px 37px 50px;
+}
+
+
+.desc--comment .desc__icon{
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.desc__comment{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 47%;
+    justify-content: center;
+    
+
+}
+.desc__pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.desc__list--vertical .desc__pic{
+    height: 125px;
+     width: 125px;
+     background-color: $white-grey;
+     border-radius: 50%;
+     margin-bottom: 50px;
+ }
+
+
+
+.desc__list--vertical .desc__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100%/3 - 38px);
+    
+}
+
+.desc__list--vertical .desc__item:after{
+    content: "";
+    position: absolute;
+    background: url(..//..//img/icon/why_sect/between.png) no-repeat center center;
+    width: 100%;
+    height: 20px;
+    display: block;
+    justify-content: center;
+    transform: translateX(60%);
+    top: 50px;
+}
+
+.desc__list--vertical .desc__item:last-child::after{
+    display: none;
+}
+
+.desc__title{
+    font-size: 27px;
+    margin-bottom: 30px;
+    font-family: 'Alegreya Sans Bold', Arial, sans-serif;
+}
+
+.desc__text{
+    font-size: 16px;
+    padding-left: 10px; 
+}
+
+.desc__list--vertical .desc__text{
+    font-family: 'Alegreya Sans Light', Arial, sans-serif;
+    font-size: 18px;
+    color: $grey;
+    padding-left: 0;
+}
+
+.desc__list--vertical .desc__icon{
+    width: 70px;
+    height: 70px;
+
+}
+.desc__comment .desc__text{
+    font-size: 18px;
+    color: $grey;
+    padding-left: 0;
+    margin-bottom: 35px;
+}
+
+.desc__author{
+    font-family: 'Alegreya Sans Medium', Arial, sans-serif;
+    color: $grey;
+    font-size: 18px;
+}
+

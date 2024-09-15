@@ -1,0 +1,12 @@
+.nav__list{
+    display: flex;
+    padding: 0%;
+  }
+ 
+.nav__item{
+    padding-right: 30px;
+}
+.nav__item:last-child{
+    padding-right: 0px;
+}
+

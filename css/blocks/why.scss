@@ -1,0 +1,21 @@
+
+
+.why{
+  position: relative;
+  background: url(../../img/icon/why_sect/pattern_why.png) no-repeat center left;
+  
+}
+
+.why:after{
+  content: '';
+  overflow: hidden;
+  width: 165px;
+  height: 225px;
+  position: absolute;
+  background:  
+  url(../../img/icon/why_sect/raspberry.png) left bottom no-repeat;
+  transform: translateY(5%);
+  bottom: -5%;
+}
+
+
