@@ -18,7 +18,7 @@
 <body>
     <div class="wrapper">
         <div class="main">
-            <section class="section page page--color-white is-active" id="one">
+            <section class="section page page--color-white active" id="one">
                 <div class="container page__container">
                     <header class="header__container">
                         <a href="" class="logo nav__link" data-scroll-to="0">CHO CCO</a>
@@ -43,7 +43,7 @@
                                     <a href="#" class="nav__link" data-scroll-to="6">Как мы работаем</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link" data-scroll-to="7">Контакты</a>
+                                    <a href="#" class="nav__link" data-scroll-to="8">Контакты</a>
                                 </li>
     
                             </ul>
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="button">
-                                <button type="submit" class="order-button" data-scroll-to="6">Заказать</button>
+                                <button type="submit" class="order-button" data-scroll-to="7">Заказать</button>
                             </div>
                         </div>
                         <div class=" content--right">
@@ -74,7 +74,10 @@
                                 <svg class="desc__icon">
                                     <use xlink:href='../img/icon/sprite.svg#desc__icon1'></use>
                                 </svg>
-                                <div class="desc__text">100% натуральный продукт</div>
+
+                                <div class="desc__text">100% натуральный  продукт</div>
+
+
                             <li class="desc__item">
                                 <svg class="desc__icon">
                                     <use xlink:href='../img/icon/sprite.svg#desc__icon2'></use>
@@ -97,7 +100,7 @@
                         <div class="about">
                             <h2 class="about__title">Почему CHOCCO?</h2>
                             <div class="about__text">В нашем мире все происходит очень быстро, поэтому мы делаем батончики,
-                                которые удобно взять с собой</div>
+                                которые удобно взять с собою</div>
                         </div>
                         <ul class="desc__list desc__list--vertical">
                             <li class="desc__item">
@@ -181,7 +184,8 @@
                                                         <svg class="ingredients__img">
                                                             <use xlink:href='../img/icon/sprite.svg#seaweed'></use>
                                                         </svg>
-                                                        <div class="ingredients__text">Мор. водоросли</div>
+                                                        <div class="ingredients__text">Мор водоросли</div>
+
                                                         <div class="ingredients__weight">15 г</div>
                                                     </li>
                                                     <li class="ingredients__item">
@@ -244,7 +248,7 @@
                                                 <span class="bar__price-rub">P</span>
                                             </div>
                                             <div class="button button--color--green">
-                                                <button type="submit" class="order-button" data-scroll-to="6">Заказать</button>
+                                                <button type="submit" class="order-button" data-scroll-to="7">Заказать</button>
                                             </div>
                                         </div>
     
@@ -400,13 +404,14 @@
                     <div class="menu__base">
                         Меню
                     </div>
+                    <a class="close"></a>
                     <ul class="desc menu__content" id="menu__content">
                         <li class=" menu__list" id="menu__list">
                             <div class="menu__title menu__title-1">
                                 Батончики с молоком
                             </div>
                             <div class="menu__text">
-                                <a class="close"></a>
+                                <!-- <a class="close"></a> -->
                                 <p>
                                     Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и
                                     вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и
@@ -423,6 +428,7 @@
                                 С медом и фруктами
                             </div>
                             <div class="menu__text">
+                                <!-- <a class="close"></a> -->
                                 <p>
                                     Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и
                                     вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и
@@ -439,6 +445,7 @@
                                 Дикие ягоды
                             </div>
                             <div class="menu__text">
+                                <!-- <a class="close"></a> -->
                                 <p>
                                     Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и
                                     вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и
@@ -533,6 +540,36 @@
     
                 </div>
             </section>
+            <section class="section video"  id="three">
+                <div class="container content video__container">
+                    <h2 class="about__title section__title_black section__title_center">Как мы работаем</h2>
+                    <div class="video__player">
+                        <video id="player" poster = "../img/icon/video_sec/playercover.png">
+                            <source src="../img/icon/video_sec/videoplayback_short.mp4" type= "video/mp4">
+                        </video>
+                        <a href="/" class="video__player-icon" onclick="event.preventDefault()">
+                            <img src="../img/icon/video_sec/Play_white.png" alt class="play video__player-img">
+                        </a>
+                    </div>
+                    <div class="video__toolbar">
+                        <div class="duration">
+                            <a href="" class="duration-icon" onclick="event.preventDefault()">
+                                <img src="../img/icon/video_sec/Play_gray.png" alt class="play duration__img">
+                            </a>
+                            <input type="range" class="duration__length" id="durationLevel" min="0" max="0">
+                        </div>
+                        <div class="sound">
+                            <a href="" class="sound-icon" onclick="event.preventDefault()">
+                                <img src="../img/icon/video_sec/Volum_gray.png" alt class="sound__mic" id="mic">
+                            </a>
+                            <div class="sound__volume">
+                                <input type="range" class="duration__length duration__length--other" id="micLevel" min="0" max="10">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+          
+            </section>
             <section class="section order"  id="seven">
                 <div class="container order__container">
                     <div class="content form">
@@ -621,8 +658,7 @@
             </section>
             <section class="section contacts"  id="eight">
                 <div class="contacts__content">
-                    <div class="contacts__map">
-                        <img src="../img/icon/contacts_sec/map.png" alt="изображение карты" class="contacts__img">
+                    <div class="contacts__map map" id="map">
                     </div>
                     <div class="contacts__points">
                         <div class="container contacts__container">
@@ -671,6 +707,7 @@
                 <li class="pages__elips"><a href="#" class="pages__item" data-scroll-to="5"></a></li>
                 <li class="pages__elips"><a href="#" class="pages__item" data-scroll-to="6"></a></li>
                 <li class="pages__elips"><a href="#" class="pages__item" data-scroll-to="7"></a></li>
+                <li class="pages__elips"><a href="#" class="pages__item" data-scroll-to="8"></a></li>
                 
             </ul>
         </div>
@@ -684,49 +721,54 @@
             <nav class=" nav_gamburger">
                 <ul class=" nav__list_gamburger">
                     <li class=" nav__item_gamburger ">
-                        <a href="#" class="nav__link">О нас</a>
+                        <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
                     </li>
                     <li class=" nav__item_gamburger">
-                        <a href="#" class="nav__link">Батончики</a>
+                        <a href="#" class="nav__link" data-scroll-to="2">Батончики</a>
                     </li>
                     <li class=" nav__item_gamburger">
-                        <a href="#" class="nav__link">Команда</a>
+                        <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
                     </li>
                     <li class=" nav__item_gamburger">
-                        <a href="#" class="nav__link">Меню</a>
+                        <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
                     </li>
                     <li class=" nav__item_gamburger">
-                        <a href="#" class="nav__link">Отзывы</a>
+                        <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
                     </li>
                     <li class=" nav__item_gamburger">
-                        <a href="#" class="nav__link">Как мы работаем</a>
+                        <a href="#" class="nav__link" data-scroll-to="6">Как мы работаем</a>
                     </li>
                     <li class=" nav__item_gamburger">
-                        <a href="#" class="nav__link">Контакты</a>
+                        <a href="#" class="nav__link" data-scroll-to="8">Контакты</a>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="modal-review" id="modal-review">
             <div class="modal-review__inner">
-                <!-- "Сообщение отправлено" -->
+                <!-- "Ваше ообщение отправлено" -->
                 <div class="button button--color--green">
                     <button type="reset" class="order-button">ЗАКРЫТЬ</button>
                 </div>
             </div>
         </div>
-
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- <script src="js/player.js"></script> -->
     <!-- <script src="main.min.js"></script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=960f5809-db6a-4a35-9628-533c81b806d4&lang=ru_RU" type="text/javascript">
+    </script>
     <script src="./scripts/module-accord.js"></script>
     <script src="./scripts/module-form.js"></script>
     <script src="./scripts/module-menu.js"></script>
     <script src="./scripts/module-scroll.js"></script>
     <script src="./scripts/module-slider.js"></script>
     <script src="./scripts/module-slideshow.js"></script>
+    <script src="./scripts/module-player.js"></script>
+    <script src="./scripts/module-map.js"></script>
 
 
 </body>

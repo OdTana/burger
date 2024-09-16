@@ -4,10 +4,10 @@
     justify-content: space-between;
     align-items: center;
     padding-top: rem(22px) ;
-    @include tablets {
+    @include tablets{
       justify-content: flex-start;
     }
-  @include phones {
+    @include phones {
     justify-content: flex-start;
     padding-top: rem(18px) ;
     }
@@ -17,6 +17,9 @@
 
   .phone__number, .logo{
     font-size: rem(24px) ;
+    @include phones{
+      font-size: rem(18px);
+    }
   }
 
   .phone{

@@ -1,6 +1,6 @@
 
 //AJAX
-;(function() {
+
 const overlay = (function () {
     let body  = document.querySelector("body");
     let link = document.querySelector(".order-button");
@@ -47,7 +47,7 @@ const overlay = (function () {
          
     }    
 })();
-})()
+
 
 //AJAX - созд ссылки Х
 // const overlay = (function () {
@@ -134,7 +134,7 @@ var submitForm = function (e){//обрабатывается ответ с се�
     e.preventDefault();
     var form = e.target;
     let request = ajaxForm(form);//кладем ответ с сервера в перем request
-    console.log(request)
+    // console.log(request)
     request.addEventListener('load', () => {//после того как ответ получен, проверяем статус ответа и выводим модальное окно
         
         if (request.status >= 400){
